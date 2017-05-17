@@ -84,7 +84,7 @@
     newInstance          : 新建实例
     isInstance           : 是不是某个类的实例
     getByArray           : 得到数组中的某个元素
-    GetClassListByPackage:得到类的集合
+    GetClassListByPackage: 得到类的集合
 ## AppResourceMgr -> 获取本地指定资源信息
     getStringByAssets: 根据本地Assets目录下资源名称，获取String数据信息
     getListByAssets  : 根据本地Assets目录下资源名称，获取List集合信息
@@ -102,7 +102,7 @@
     getSysClientOs             : 获得客户端操作系统名称
     getSysSdk                  : 获取当前操作系统的sdk版本
     getSysLanguage             : 获取当前操作系统的语言
-    getSysModel                :获取手机型号
+    getSysModel                : 获取手机型号
     getSysRelease              : 获取操作系统的版本号
     getSysSIMSerialNum         : 读取SIM卡序列号
     getSysCPUSerialNum         : 获取手机CPU序列号
@@ -111,7 +111,7 @@
     getSysCarrier              : 获取运营商信息(三大运营商)
     getSysPhoneState           : 获取手机状态(0：无活动 1：响铃 2：待机)
     getSysPhoneLoaction        : 获得手机方位
-    getSysDeviceSoftVersion    :获得设备的软件版本号(注：the IMEI/SV(software version) for GSM phones 不支持返回“not available”)
+    getSysDeviceSoftVersion    : 获得设备的软件版本号(注：the IMEI/SV(software version) for GSM phones 不支持返回“not available”)
     getSysPhoneNumber          : 获得手机号
     getSysSimCode              : 获得SIM卡提供的移动国家码和移动网络码.5或6位的十进制数字。(注：SIM卡的状态必须是 SIM_STATE_READY(使用getSimState()判断))
     getSysSimPrivatorName      : 服务商名称(注:例如：中国移动、联通SIM卡的状态必须是 SIM_STATE_READY(使用getSimState()判断))
@@ -268,30 +268,30 @@
     saveAsJPEG         : 指定目录写入文件内容
     saveAsPNG          : 指定目录写入文件内容
 ## ToolDateTime -> 日期管理类
-    formatFriendly: 将日期格式化成友好的字符串：几分钟前、几小时前、几天前、几月前、几年前、刚刚
-    formatDateTime: 将日期以yyyy-MM-dd HH:mm:ss格式化
-    formatDateTime: 将日期以yyyy-MM-dd HH:mm:ss格式化
-    formatDateTime: 将日期以yyyy-MM-dd HH:mm:ss格式化
-    parseDate: 将日期字符串转成日期
-    gainCurrentDate: 获取系统当前日期
-    compareDate: 验证日期是否比当前日期早
-    addDateTime: 对日期进行增加操作
-    subDateTime: 对日期进行相减操作
+    formatFriendly        : 将日期格式化成友好的字符串：几分钟前、几小时前、几天前、几月前、几年前、刚刚
+    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    parseDate             : 将日期字符串转成日期
+    gainCurrentDate       : 获取系统当前日期
+    compareDate           : 验证日期是否比当前日期早
+    addDateTime           : 对日期进行增加操作
+    subDateTime           : 对日期进行相减操作
     formatDateForExcelDate: 格式化excel中的时间
-    formatDateForFileName: 将日期格式化作为文件名
-    formatDateSecond: 格式化日期(精确到秒)
-    tempDateSecond: 格式化日期(精确到秒)
-    tempDateSecond: 格式化日期(精确到秒)
-    formatDateDay: 格式化日期(精确到天)
-    formatDateDetailDay: 式化日期(精确到天)
-    formatNumber: double类型的数字保留两位小数（四舍五入）
-    formateDate: 将字符串转换成日期
-    parseStringToDate: 将字符日期转换成Date
-    formatDoubleNumber: 将double日期转换成String
+    formatDateForFileName : 将日期格式化作为文件名
+    formatDateSecond      : 格式化日期(精确到秒)
+    tempDateSecond        : 格式化日期(精确到秒)
+    tempDateSecond        : 格式化日期(精确到秒)
+    formatDateDay         : 格式化日期(精确到天)
+    formatDateDetailDay   : 式化日期(精确到天)
+    formatNumber          : double类型的数字保留两位小数（四舍五入）
+    formateDate           : 将字符串转换成日期
+    parseStringToDate     : 将字符日期转换成Date
+    formatDoubleNumber    : 将double日期转换成String
 ## AppCalculateMgr -> 提供APP应用计算，算法等
-    distance: 两点间的距离
+    distance        : 两点间的距离
     pointTotoDegrees: 计算点a(x,y)的角度
-    checkInRound: 点在圆肉
+    checkInRound    : 点在圆肉
     
 ## About
     这里把开发中常用的一些工具类做一个整理，主要用到的时候不用再费力的百度或者Google了，大家有需要的可以随时借鉴走，同时也希望这个越来越强大，有什么错误的地方还希望各位不吝指出，让我得以完善，当然，在此声明，这些并不是我一个人，也用了许多前辈们的东西，这里一并感谢，目前还在测试，还没有上传到Jcenter，需要的自己拷贝，测试完成后会给大家贴出引用地址的，持续更新中。<br />
