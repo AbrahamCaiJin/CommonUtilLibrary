@@ -43,7 +43,8 @@
     TimerHideKeyboard: 通过定时器强制隐藏虚拟键盘
     isKeybord        : 输入法是否显示
 ## AppLogMessageMgr -> 系统日志输出工具类
-    isEnableDebug: 设置log总开关,debug模式(true:打印日志  false：不打印)<br>i: Info日志<br />
+    isEnableDebug: 设置log总开关,debug模式(true:打印日志  false：不打印)
+    i            : Info日志
     d            : Debug日志
     w            : Warn日志
     v            : Verbose日志
@@ -165,7 +166,7 @@
     getCapabilities   : 获取指定Wifi的功能
     getLevel          : 获取指定Wifi的信号强度
 ## About
-    这里把开发中常用的一些工具类做一个整理，主要用到的时候不用再费力的百度或者Google了，大家有需要的可以随时借鉴走，同时也希望这个越来越强大，有什么错误的地方还希望各位不吝指出，让我得以完善，当然，在此声明，这些并不是我一个人，也用了许多前辈们的东西，这里一并感谢，目前还在测试，还没有上传到Jcenter，需要的自己拷贝，测试完成后会给大家贴出引用地址的，持续更新中。
-    我的qq群：523167548
-    我的博客：http://blog.csdn.net/u014727709?viewmode=contents
+    这里把开发中常用的一些工具类做一个整理，主要用到的时候不用再费力的百度或者Google了，大家有需要的可以随时借鉴走，同时也希望这个越来越强大，有什么错误的地方还希望各位不吝指出，让我得以完善，当然，在此声明，这些并不是我一个人，也用了许多前辈们的东西，这里一并感谢，目前还在测试，还没有上传到Jcenter，需要的自己拷贝，测试完成后会给大家贴出引用地址的，持续更新中。<br />
+    我的qq群：523167548<br />
+    我的博客：http://blog.csdn.net/u014727709?viewmode=contents<br />
     对你有用就给一个Start吧！
