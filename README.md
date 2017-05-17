@@ -164,7 +164,7 @@
     getBSSID          : 获取指定Wifi的物理地址
     getFrequency      : 获取指定Wifi的频率
     getCapabilities   : 获取指定Wifi的功能
-    getLevel          : 获取指定Wifi的信号强度
+    getLevel          : 获取指定Wifi的信号强度
 ## ConvertUtils -> 类型转换类
     hexStringToBytes: 十六进制字符串转换为byte数组
     bytesToHexString: byte数组转换为十六进制字符串
