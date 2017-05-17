@@ -49,7 +49,7 @@
     w            : Warn日志
     v            : Verbose日志
     e            : Error日志
-    这里推荐使用凯子哥的日志管理工具，灰常好用:[KLog](http://kaizige.vip/2016/06/13/klog/)<br /> 
+    这里推荐使用凯子哥的日志管理工具，灰常好用: [KLog](http://kaizige.vip/2016/06/13/klog/)  
 ## AppNetworkMgr -> App网络管理
     getNetworkState   : 获取当前手机连接的网络类型
     isNetworkConnected: 判断网络是否连接
