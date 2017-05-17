@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	页面名称： sys_show_toast.xml
+	页面功能： 自定义Toast布局页面
+ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sys_toast" >
+    <!--提示文本 -->
+    <TextView
+        android:id="@+id/sys_show_toast_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" 
+        android:textColor="@color/white" />
+</LinearLayout>

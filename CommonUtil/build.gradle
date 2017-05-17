@@ -1,0 +1,127 @@
+apply plugin: 'com.android.library'
+//-------------------------上传到jcenter-----------------------
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+version = "1.0.0"//提交到仓库中的版本号
+//-------------------------上传到jcenter-----------------------
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        minSdkVersion 12
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    //编码工具类用到
+    compile files('libs/BASE64Decoder.jar')
+    //KLog
+    compile 'com.github.zhaokaiqiang.klog:library:1.5.0'
+}
+//-------------------------上传到jcenter-----------------------
+
+def siteUrl = 'https://github.com/caijin199410/CommonUtil.git'      // 项目的主页   这个是说明，可随便填
+def gitUrl = 'https://github.com/caijin199410/CommonUtil.git'      // Git仓库的url  这个是说明，可随便填
+group = "com.abrahamcaijin.comonutil"    // 这里是groupId ,必须填写  一般填你唯一的包名
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                name 'CommonUtil,常用开发工具类集收集'     //项目描述
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The CommonUtil Software License, Version 1.0.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'caijinabraham'        //填写开发者的一些基本信息
+                        name 'caijinabraham'    //填写开发者的一些基本信息
+                        email 'caijinabraham@outlook.com'   //填写开发者的一些基本信息
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadoc(type: Javadoc) {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        author true
+        version true
+        links "http://docs.oracle.com/javase/7/docs/api"
+    }
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.file('local.properties').newDataInputStream())
+bintray {
+//    userOrg=properties.getProperty("bintray.user")
+    user = properties.getProperty("bintray.user")    //读取 local.properties 文件里面的 bintray.user
+    key = properties.getProperty("bintray.apikey")   //读取 local.properties 文件里面的 bintray.apikey
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "CommonUtil"    //发布到JCenter上的项目名字，必须填写
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
+//publish {
+//    userOrg = 'caijinabraham'      //bintray注册的用户名
+//    groupId = 'com.abrahamcaijin.comonutil'         //compile引用时的第1部分groupId
+//    artifactId = 'CommonUtil'     //compile引用时的第2部分项目名
+//    publishVersion = '1.0.0'    //compile引用时的第3部分版本号
+//    desc = 'This is a rxbus same of eventbus extend library '
+//    website = 'https://github.com/wzgiceman/Rxbus'
+//}
+//-------------------------上传到jcenter-----------------------
