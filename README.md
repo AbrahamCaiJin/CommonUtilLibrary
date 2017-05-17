@@ -164,7 +164,131 @@
     getBSSID          : 获取指定Wifi的物理地址
     getFrequency      : 获取指定Wifi的频率
     getCapabilities   : 获取指定Wifi的功能
-    getLevel          : 获取指定Wifi的信号强度
+    getLevel          : 获取指定Wifi的信号强度
+## ConvertUtils -> 类型转换类
+    hexStringToBytes: 十六进制字符串转换为byte数组
+    bytesToHexString: byte数组转换为十六进制字符串
+    charToByte      : char转换为byte数组 
+    intToByte       : int转换为byte数组
+    byteToInt       : byte数组转换为int
+    saveDecimals    : 保留几位小数
+## DateUtils -> 日期管理类
+    getNowDayOffset: 获取日期
+    getTime        : 获取日期
+    forward        : 使日期倒一天
+    isLeapYear     : 判断平年闰年
+    getDaysOfMonth : 计算某月的天数
+    secondsMorning : 获取当天凌晨的秒数
+    secondsNight   : 获取第二天凌晨的秒数
+    isSameDay      : 判断某两天是不是同一天
+## DensityUtils ->手机常用单位转换的辅助类
+    dip2px: 据手机的分辨率从 dip 的单位 转成为 px(像素)
+    px2dip: 根据手机的分辨率从 px(像素) 的单位 转成为 dp
+    dp2px : dp转px
+    sp2px : sp转px
+    px2dp : px转dp
+    px2sp : px转sp
+## FileUtils -> 文件管理类
+    hasSdcard    : 检查是否存在SD卡
+    createFileDir: 创建目录
+    delFile      : 删除文件（若为目录，则递归删除子目录和文件）
+    getFileSize  : 取文件大小，单位为byte（若为目录，则包括所有子目录和文件）
+    saveBitmap   : 保存Bitmap到指定目录
+    isFileExists : 判断某目录下文件是否存在
+## ToastUtil -> Toast信息工具类
+    show                  : 屏幕中心位置短时间显示Toast。
+    ToastShortBottomCenter: 屏幕底部中间位置显示短时间Toast
+    ToastShortBottomLeft  : 屏幕底部左边位置短时间显示Toast
+    ToastShortBottomRight : 屏幕底部右边位置短时间显示Toast
+    ToastShortCenter      : 屏幕中心位置短时间显示Toast
+    ToastShortCenterLeft  : 屏幕中心左边位置短时间显示Toast
+    ToastShortCenterRight : 屏幕中心右边位置短时间显示Toast
+    ToastShortTopCenter   : 屏幕顶部中心位置短时间显示Toast
+    ToastShortTopLeft     : 屏幕顶部左边位置短时间显示Toast
+    ToastShortTopRight    : 屏幕顶部右边位置短时间显示Toast
+    ToastLongBottomCenter : 屏幕底部中间位置显示长时间Toast
+    ToastLongBottomLeft   : 屏幕底部左边位置长时间显示Toast
+    ToastLongBottomRight  : 屏幕底部右边位置长时间显示Toast
+    ToastLongCenter       : 屏幕中心位置长时间显示Toast
+    ToastLongCenterLeft   : 屏幕中心左边位置长时间显示Toast
+    ToastLongCenterRight  : 屏幕中心右边位置短时间显示Toast
+    ToastLongTopCenter    : 屏幕顶部中心位置长时间显示Toast
+    ToastLongTopLeft      : 屏幕顶部左边位置长时间显示Toast
+    ToastLongTopRight     : 屏幕顶部右边位置长时间显示Toast
+## ToolAnimation -> 控件点击效果动画工具类
+    addTouchDrak : 给视图添加点击效果,让背景变深
+    addTouchLight: 给视图添加点击效果,让背景变暗
+## ViewUtils -> view管理类
+    removeSelfFromParent: 把自身从父View中移除
+    isTouchInView       : 判断触点是否落在该View上
+## ToolPhone -> 手机相关操作API
+    callPhone            : 直接呼叫指定的号码
+    toCallPhoneActivity  : 跳转至拨号界面
+    sendMessage          : 直接调用短信API发送信息(设置监听发送和接收状态)
+    toSendMessageActivity: 跳转至发送短信界面(自动设置接收方的号码)
+    toChooseContactsList : 跳转至联系人选择界面
+    getChoosedPhoneNumber: 获取选择的联系人的手机号码
+    toCameraActivity     : 跳转至拍照程序界面
+    toImagePickerActivity: 跳转至相册选择界面
+    getChoosedImage      : 获得选中相册的图片
+    openWebSite          : 调用本地浏览器打开一个网页
+    toSettingActivity    : 跳转至系统设置界面
+    toWIFISettingActivity: 跳转至WIFI设置界面
+    openPDFFile          : 启动本地应用打开PDF
+    openWordFile         : 启动本地应用打开PDF
+    openOfficeByWPS      : 调用WPS打开office文档
+    isInstalledApp       : 判断是否安装指定包名的APP
+    isExistActivity      : 判断是否存在指定的Activity
+## ToolFile -> 文件工具类
+    isMountedSDCard    : 检查是否已挂载SD卡镜像（是否存在SD卡）
+    gainSDFreeSize     : 获取SD卡剩余容量（单位Byte）
+    gainSDAllSize      : 获取SD卡总容量（单位Byte）
+    gainSDCardPath     : 获取可用的SD卡路径（若SD卡不没有挂载则返回""）
+    readFileByLines    : 以行为单位读取文件内容，一次读一整行，常用于读面向行的格式化文件
+    readFileByLines    : 以行为单位读取文件内容，一次读一整行，常用于读面向行的格式化文件
+    saveToFile         : 保存内容
+    saveToFile         : 指定编码保存内容
+    appendToFile       : 追加文本
+    appendToFile       : 追加文本
+    isExsit            : 判断文件是否存在
+    read               : 快速读取程序应用包下的文件内容
+    read               : 读取指定目录文件的文件内容
+    read               : 以行为单位读取文件内容，一次读一整行，常用于读面向行的格式化文件
+    readRawValue       : 读取raw目录的文件内容
+    readAssetsValue    : 读取assets目录的文件内容
+    readAssetsListValue: 读取assets目录的文件内容
+    readShrePerface    : 获取SharedPreferences文件内容
+    writeShrePerface   : 写入SharedPreferences文件内容
+    write              : 写入应用程序包files目录下文件
+    write              : 写入应用程序包files目录下文件
+    write              : 写入应用程序包files目录下文件
+    write              : 指定编码将内容写入目标文件
+    write              : 指定目录写入文件内容
+    write              : 写入文件
+    saveAsJPEG         : 指定目录写入文件内容
+    saveAsPNG          : 指定目录写入文件内容
+## ToolDateTime -> 日期管理类
+    formatFriendly: 将日期格式化成友好的字符串：几分钟前、几小时前、几天前、几月前、几年前、刚刚
+    formatDateTime: 将日期以yyyy-MM-dd HH:mm:ss格式化
+    formatDateTime: 将日期以yyyy-MM-dd HH:mm:ss格式化
+    formatDateTime: 将日期以yyyy-MM-dd HH:mm:ss格式化
+    parseDate: 将日期字符串转成日期
+    gainCurrentDate: 获取系统当前日期
+    compareDate: 验证日期是否比当前日期早
+    addDateTime: 对日期进行增加操作
+    subDateTime: 对日期进行相减操作
+    formatDateForExcelDate: 格式化excel中的时间
+    formatDateForFileName: 将日期格式化作为文件名
+    formatDateSecond: 格式化日期(精确到秒)
+    tempDateSecond: 格式化日期(精确到秒)
+    tempDateSecond: 格式化日期(精确到秒)
+    formatDateDay: 格式化日期(精确到天)
+    formatDateDetailDay: 式化日期(精确到天)
+    formatNumber: double类型的数字保留两位小数（四舍五入）
+    formateDate: 将字符串转换成日期
+    parseStringToDate: 将字符日期转换成Date
+    formatDoubleNumber: 将double日期转换成String
+    
 ## About
     这里把开发中常用的一些工具类做一个整理，主要用到的时候不用再费力的百度或者Google了，大家有需要的可以随时借鉴走，同时也希望这个越来越强大，有什么错误的地方还希望各位不吝指出，让我得以完善，当然，在此声明，这些并不是我一个人，也用了许多前辈们的东西，这里一并感谢，目前还在测试，还没有上传到Jcenter，需要的自己拷贝，测试完成后会给大家贴出引用地址的，持续更新中。<br />
     我的qq群：523167548<br />
