@@ -122,10 +122,29 @@
     getVibrator                : 获取震动器对象
     getSysLocalIpAddress       : 获取手机IP地址
 ## AppToastMgr -> 自定义Toast提示框
-    shortToast : 自定义Toast调用
-    longToast  : 自定义Toast调用
-    cancelToast: 取消显示Toast
-    Toast      : 默认Toast调用
+    shortToast            : 自定义Toast调用
+    longToast             : 自定义Toast调用
+    cancelToast           : 取消显示Toast
+    Toast                 : 默认Toast调用
+    show                  : 屏幕中心位置短时间显示Toast。
+    ToastShortBottomCenter: 屏幕底部中间位置显示短时间Toast
+    ToastShortBottomLeft  : 屏幕底部左边位置短时间显示Toast
+    ToastShortBottomRight : 屏幕底部右边位置短时间显示Toast
+    ToastShortCenter      : 屏幕中心位置短时间显示Toast
+    ToastShortCenterLeft  : 屏幕中心左边位置短时间显示Toast
+    ToastShortCenterRight : 屏幕中心右边位置短时间显示Toast
+    ToastShortTopCenter   : 屏幕顶部中心位置短时间显示Toast
+    ToastShortTopLeft     : 屏幕顶部左边位置短时间显示Toast
+    ToastShortTopRight    : 屏幕顶部右边位置短时间显示Toast
+    ToastLongBottomCenter : 屏幕底部中间位置显示长时间Toast
+    ToastLongBottomLeft   : 屏幕底部左边位置长时间显示Toast
+    ToastLongBottomRight  : 屏幕底部右边位置长时间显示Toast
+    ToastLongCenter       : 屏幕中心位置长时间显示Toast
+    ToastLongCenterLeft   : 屏幕中心左边位置长时间显示Toast
+    ToastLongCenterRight  : 屏幕中心右边位置短时间显示Toast
+    ToastLongTopCenter    : 屏幕顶部中心位置长时间显示Toast
+    ToastLongTopLeft      : 屏幕顶部左边位置长时间显示Toast
+    ToastLongTopRight     : 屏幕顶部右边位置长时间显示Toast
 ## AppValidationMgr -> 正则表达式
     isEmpty      : 验证是否为空串 (包括空格、制表符、回车符、换行符组成的字符串 若输入字符串为null或空字符串,返回true)
     isNotEmpty   : 是否不为空
@@ -172,15 +191,55 @@
     intToByte       : int转换为byte数组
     byteToInt       : byte数组转换为int
     saveDecimals    : 保留几位小数
-## DateUtils -> 日期管理类
-    getNowDayOffset: 获取日期
-    getTime        : 获取日期
-    forward        : 使日期倒一天
-    isLeapYear     : 判断平年闰年
-    getDaysOfMonth : 计算某月的天数
-    secondsMorning : 获取当天凌晨的秒数
-    secondsNight   : 获取第二天凌晨的秒数
-    isSameDay      : 判断某两天是不是同一天
+## AppDateMgr -> 日期管理类
+    todayYyyyMmDd         : 当天的年月日
+    todayHhMmSs           : 当天的时分秒
+    todayYyyyMmDdHhMmSs   : 当天的年月日时分秒
+    parseYyyy             : 获取年
+    parseMm               : 获取月
+    parseDd               : 获取日
+    parseYyyyMmDd         : 获取年月日
+    parseHhMmSs           : 时分秒
+    getWeekNumber         : 获取星期几
+    getWeekOfMonth        : 日期中某个月份的第几周
+    getWeekOfYear         : 日期中某个年份的第几周
+    dateTimeToTimeStamp   : 将年月日时分秒转成Long类型
+    timeStampToDateTime   : 将Long类型转成年月日时分秒
+    string2Date           : 将年月日时分秒转成Date类型
+    date2String           : 将Date类型转成年月日时分秒
+    dateIsBefore          : 比较日期
+    minutesBetweenTwoDate : 相差多少分钟
+    getChineseZodiac      : 获取日期中的生肖
+    getZodiac             : 获取日期中的星座
+    getNowDayOffset       : 获取日期
+    getTime               : 获取日期
+    forward               : 使日期倒一天
+    isLeapYear            : 判断平年闰年
+    getDaysOfMonth        : 计算某月的天数
+    secondsMorning        : 获取当天凌晨的秒数
+    secondsNight          : 获取第二天凌晨的秒数
+    isSameDay             : 判断某两天是不是同一天
+    formatFriendly        : 将日期格式化成友好的字符串：几分钟前、几小时前、几天前、几月前、几年前、刚刚
+    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    parseDate             : 将日期字符串转成日期
+    gainCurrentDate       : 获取系统当前日期
+    compareDate           : 验证日期是否比当前日期早
+    addDateTime           : 对日期进行增加操作
+    subDateTime           : 对日期进行相减操作
+    formatDateForExcelDate: 格式化excel中的时间
+    formatDateForFileName : 将日期格式化作为文件名
+    formatDateSecond      : 格式化日期(精确到秒)
+    tempDateSecond        : 格式化日期(精确到秒)
+    tempDateSecond        : 格式化日期(精确到秒)
+    formatDateDay         : 格式化日期(精确到天)
+    formatDateDetailDay   : 式化日期(精确到天)
+    formatNumber          : double类型的数字保留两位小数（四舍五入）
+    formateDate           : 将字符串转换成日期
+    parseStringToDate     : 将字符日期转换成Date
+    formatDoubleNumber    : 将double日期转换成String
+    
 ## DensityUtils ->手机常用单位转换的辅助类
     dip2px: 据手机的分辨率从 dip 的单位 转成为 px(像素)
     px2dip: 根据手机的分辨率从 px(像素) 的单位 转成为 dp
@@ -195,26 +254,6 @@
     getFileSize  : 取文件大小，单位为byte（若为目录，则包括所有子目录和文件）
     saveBitmap   : 保存Bitmap到指定目录
     isFileExists : 判断某目录下文件是否存在
-## ToastUtil -> Toast信息工具类
-    show                  : 屏幕中心位置短时间显示Toast。
-    ToastShortBottomCenter: 屏幕底部中间位置显示短时间Toast
-    ToastShortBottomLeft  : 屏幕底部左边位置短时间显示Toast
-    ToastShortBottomRight : 屏幕底部右边位置短时间显示Toast
-    ToastShortCenter      : 屏幕中心位置短时间显示Toast
-    ToastShortCenterLeft  : 屏幕中心左边位置短时间显示Toast
-    ToastShortCenterRight : 屏幕中心右边位置短时间显示Toast
-    ToastShortTopCenter   : 屏幕顶部中心位置短时间显示Toast
-    ToastShortTopLeft     : 屏幕顶部左边位置短时间显示Toast
-    ToastShortTopRight    : 屏幕顶部右边位置短时间显示Toast
-    ToastLongBottomCenter : 屏幕底部中间位置显示长时间Toast
-    ToastLongBottomLeft   : 屏幕底部左边位置长时间显示Toast
-    ToastLongBottomRight  : 屏幕底部右边位置长时间显示Toast
-    ToastLongCenter       : 屏幕中心位置长时间显示Toast
-    ToastLongCenterLeft   : 屏幕中心左边位置长时间显示Toast
-    ToastLongCenterRight  : 屏幕中心右边位置短时间显示Toast
-    ToastLongTopCenter    : 屏幕顶部中心位置长时间显示Toast
-    ToastLongTopLeft      : 屏幕顶部左边位置长时间显示Toast
-    ToastLongTopRight     : 屏幕顶部右边位置长时间显示Toast
 ## ToolAnimation -> 控件点击效果动画工具类
     addTouchDrak : 给视图添加点击效果,让背景变深
     addTouchLight: 给视图添加点击效果,让背景变暗
@@ -260,34 +299,11 @@
     readShrePerface    : 获取SharedPreferences文件内容
     writeShrePerface   : 写入SharedPreferences文件内容
     write              : 写入应用程序包files目录下文件
-    write              : 写入应用程序包files目录下文件
-    write              : 写入应用程序包files目录下文件
     write              : 指定编码将内容写入目标文件
     write              : 指定目录写入文件内容
     write              : 写入文件
     saveAsJPEG         : 指定目录写入文件内容
     saveAsPNG          : 指定目录写入文件内容
-## ToolDateTime -> 日期管理类
-    formatFriendly        : 将日期格式化成友好的字符串：几分钟前、几小时前、几天前、几月前、几年前、刚刚
-    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
-    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
-    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
-    parseDate             : 将日期字符串转成日期
-    gainCurrentDate       : 获取系统当前日期
-    compareDate           : 验证日期是否比当前日期早
-    addDateTime           : 对日期进行增加操作
-    subDateTime           : 对日期进行相减操作
-    formatDateForExcelDate: 格式化excel中的时间
-    formatDateForFileName : 将日期格式化作为文件名
-    formatDateSecond      : 格式化日期(精确到秒)
-    tempDateSecond        : 格式化日期(精确到秒)
-    tempDateSecond        : 格式化日期(精确到秒)
-    formatDateDay         : 格式化日期(精确到天)
-    formatDateDetailDay   : 式化日期(精确到天)
-    formatNumber          : double类型的数字保留两位小数（四舍五入）
-    formateDate           : 将字符串转换成日期
-    parseStringToDate     : 将字符日期转换成Date
-    formatDoubleNumber    : 将double日期转换成String
 ## AppCalculateMgr -> 提供APP应用计算，算法等
     distance        : 两点间的距离
     pointTotoDegrees: 计算点a(x,y)的角度
