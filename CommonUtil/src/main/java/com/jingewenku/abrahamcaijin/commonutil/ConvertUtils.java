@@ -38,6 +38,11 @@ public class ConvertUtils {
         return d;
     }
 
+    /**
+     * char转换为byte数组
+     * @param c
+     * @return
+     */
     public static byte charToByte(char c) {
         return (byte) "0123456789ABCDEF".indexOf(c);
     }

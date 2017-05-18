@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * @Description:主要功能:
+ * @Description:主要功能:文件管理
  * @Prject: CommonUtilLibrary
  * @Package: com.jingewenku.abrahamcaijin.commonutil
  * @author: AbrahamCaiJin

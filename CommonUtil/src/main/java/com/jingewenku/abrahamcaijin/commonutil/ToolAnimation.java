@@ -5,7 +5,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.widget.ImageView;
-import com.socks.library.KLog;
+import com.jingewenku.abrahamcaijin.commonutil.klog.KLog;
 
 /**
  * @Description:主要功能:控件点击效果动画工具类

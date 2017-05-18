@@ -597,5 +597,49 @@ public class AppSysDateMgr {
 		}
 		return null;
 	}
-	
+
+	/**
+	 * 描述：标准化日期时间类型的数据，不足两位的补0.
+	 *
+	 * @param dateTime
+	 *            预格式的时间字符串，如:2012-3-2 12:2:20
+	 * @return String 格式化好的时间字符串，如:2012-03-20 12:02:20
+	 */
+//	public static String dateTimeFormat(String dateTime) {
+//		StringBuilder sb = new StringBuilder();
+//		try {
+//			if (isEmpty(dateTime)) {
+//				return null;
+//			}
+//			String[] dateAndTime = dateTime.split(" ");
+//			if (dateAndTime.length > 0) {
+//				for (String str : dateAndTime) {
+//					if (str.indexOf("-") != -1) {
+//						String[] date = str.split("-");
+//						for (int i = 0; i < date.length; i++) {
+//							String str1 = date[i];
+//							sb.append(strFormat2(str1));
+//							if (i < date.length - 1) {
+//								sb.append("-");
+//							}
+//						}
+//					} else if (str.indexOf(":") != -1) {
+//						sb.append(" ");
+//						String[] date = str.split(":");
+//						for (int i = 0; i < date.length; i++) {
+//							String str1 = date[i];
+//							sb.append(strFormat2(str1));
+//							if (i < date.length - 1) {
+//								sb.append(":");
+//							}
+//						}
+//					}
+//				}
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return null;
+//		}
+//		return sb.toString();
+//	}
 }
