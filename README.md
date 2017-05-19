@@ -55,27 +55,47 @@
     isNetworkConnected: 判断网络是否连接
     openNetSetting    : 打开网络设置界面
 ## AppPhoneMgr -> 手机管理工具类
-    getInstance        : 单例对象
-    getSDKVersionNumber: 获取手机系统版本号
-    getPhoneModel      : 获取手机型号
-    getPhoneWidth      : 获取手机宽度
-    getPhoneHeight     : 获取手机高度
-    getPhoneImei       : 获取手机imei串号 ,GSM手机的 IMEI 和 CDMA手机的 MEID
-    getPhoneSim        : 获取手机sim卡号
-    getPhoneNum        : 获取手机号
-    isSDCardMount      : 判断sd卡是否挂载
-    getSDFreeSize      : 获取sd卡剩余空间的大小
-    getSDAllSize       : 获取sd卡空间的总大小
-    isTablet           : 判断是否是平板
-    isApkInstalled     : 判断一个apk是否安装
-    call               : 拨打电话
-    openWeb            : 打开网页
-    getAppPermissions  : 获取应用权限 名称列表
-    getInstalledApp    : 获取手机内安装的应用
-    getUserInstalledApp: 获取手机安装非系统应用
-    getInstalledAppInfo: 获取安装应用的信息
-    startAppPkg        : 打开指定包名的应用
-    unInstallApk       : 卸载指定包名的应用
+    getInstance          : 单例对象
+    getSDKVersionNumber  : 获取手机系统版本号
+    getPhoneModel        : 获取手机型号
+    getPhoneWidth        : 获取手机宽度
+    getPhoneHeight       : 获取手机高度
+    getPhoneImei         : 获取手机imei串号 ,GSM手机的 IMEI 和 CDMA手机的 MEID
+    getPhoneSim          : 获取手机sim卡号
+    getPhoneNum          : 获取手机号
+    isSDCardMount        : 判断sd卡是否挂载
+    getSDFreeSize        : 获取sd卡剩余空间的大小
+    getSDAllSize         : 获取sd卡空间的总大小
+    isTablet             : 判断是否是平板
+    isApkInstalled       : 判断一个apk是否安装
+    getAppPermissions    : 获取应用权限 名称列表
+    getInstalledApp      : 获取手机内安装的应用
+    getUserInstalledApp  : 获取手机安装非系统应用
+    getInstalledAppInfo  : 获取安装应用的信息
+    startAppPkg          : 打开指定包名的应用
+    unInstallApk         : 卸载指定包名的应用
+    callPhone            : 直接呼叫指定的号码
+    toCallPhoneActivity  : 跳转至拨号界面
+    sendMessage          : 直接调用短信API发送信息(设置监听发送和接收状态)
+    toSendMessageActivity: 跳转至发送短信界面(自动设置接收方的号码)
+    toChooseContactsList : 跳转至联系人选择界面
+    getChoosedPhoneNumber: 获取选择的联系人的手机号码
+    toCameraActivity     : 跳转至拍照程序界面
+    toImagePickerActivity: 跳转至相册选择界面
+    getChoosedImage      : 获得选中相册的图片
+    openWebSite          : 调用本地浏览器打开一个网页
+    toSettingActivity    : 跳转至系统设置界面
+    toWIFISettingActivity: 跳转至WIFI设置界面
+    openPDFFile          : 启动本地应用打开PDF
+    openWordFile         : 启动本地应用打开PDF
+    openOfficeByWPS      : 调用WPS打开office文档
+    isInstalledApp       : 判断是否安装指定包名的APP
+    isExistActivity      : 判断是否存在指定的Activity
+    getBootTimeString    : 获取开机时间
+    printSystemInfo      : 打印系统信息
+    getNetType           : 获取网络类型
+    getNativePhoneNumber : 获取当前设置的电话号码
+    getMacAddress        : 获取 MAC 地址
 ## AppReflectionMgr -> 反射工具类
     getProperty          : 得到某个对象的公共属性
     getStaticProperty    : 得到某类的静态公共属性
@@ -146,28 +166,40 @@
     ToastLongTopLeft      : 屏幕顶部左边位置长时间显示Toast
     ToastLongTopRight     : 屏幕顶部右边位置长时间显示Toast
 ## AppValidationMgr -> 正则表达式
-    isEmpty      : 验证是否为空串 (包括空格、制表符、回车符、换行符组成的字符串 若输入字符串为null或空字符串,返回true)
-    isNotEmpty   : 是否不为空
-    isNotZero    : 验证非零正整数
-    isNumber     : 验证是数字
-    isUpChar     : 验证是大写字母
-    isLowChar    : 验证是小写字母
-    isLetter     : 验证是英文字母
-    isChinese    : 验证输入汉字
-    isRealName   : 验证真实姓名
-    isOneCode    : 验证是否是条形码
-    isEmail      : 验证邮箱是否正确
-    isPhone      : 验证手机号是否正确
-    isPlane      : 验证座机号码是否正确
-    isPostalCode : 验证邮政编码是否正确
-    isIpAddress  : 验证IP地址是否正确
-    isURL        : 验证URL地址是否正确
-    isInteger    : 验证是否是正整数
-    isPoint      : 验证是否是小数
-    isBankNo     : 验证是否银行卡号
-    isIDCard     : 验证身份证号码是否正确
-    isPeculiarStr:判断是否有特殊字符
-    isUserName   : 判断是否为用户名账号(规则如下：用户名由下划线或字母开头，由数字、字母、下划线、点、减号组成的4-32位字符)
+    isEmpty              : 验证是否为空串 (包括空格、制表符、回车符、换行符组成的字符串 若输入字符串为null或空字符串,返回true)
+    isNotEmpty           : 是否不为空
+    isNotZero            : 验证非零正整数
+    isNumber             : 验证是数字
+    isUpChar             : 验证是大写字母
+    isLowChar            : 验证是小写字母
+    isLetter             : 验证是英文字母
+    isChinese            : 验证输入汉字
+    isRealName           : 验证真实姓名
+    isOneCode            : 验证是否是条形码
+    isEmail              : 验证邮箱是否正确
+    isPhone              : 验证手机号是否正确
+    isPlane              : 验证座机号码是否正确
+    isPostalCode         : 验证邮政编码是否正确
+    isIpAddress          : 验证IP地址是否正确
+    isURL                : 验证URL地址是否正确
+    isInteger            : 验证是否是正整数
+    isPoint              : 验证是否是小数
+    isBankNo             : 验证是否银行卡号
+    isIDCard             : 验证身份证号码是否正确
+    isPeculiarStr        :判断是否有特殊字符
+    isUserName           : 判断是否为用户名账号(规则如下：用户名由下划线或字母开头，由数字、字母、下划线、点、减号组成的4-32位字符)
+    chineseLength        : 获取字符串中文字符的长度（每个中文算2个字符）
+    strLength            : 获取字符串的长度
+    subStringLength      : 获取指定长度的字符所在位置
+    isNumberLetter       : 是否只是字母和数字
+    isContainChinese     : 是否包含中文
+    convertStreamToString: 从输入流中获得String
+    cutString            : 截取字符串到指定字节长度
+    cutStringFromChar    : 截取字符串从第一个指定字符
+    strlen               : 获取字节长度
+    getSizeDesc          : 获取大小的描述
+    ip2int               : ip地址转换为10进制数
+    gainUUID             : 获取UUID
 ## AppWifiHelperMgr -> Wifi管理工具类
     isWifiEnabled     : Wifi状态
     openWifi          : 打开wifi
@@ -184,6 +216,15 @@
     getFrequency      : 获取指定Wifi的频率
     getCapabilities   : 获取指定Wifi的功能
     getLevel          : 获取指定Wifi的信号强度
+    getBSSID          : 获取SSID
+    getCurrentNetId   : 返回当前连接的网络的ID
+    getWifiInfo       : 返回所有信息
+    getIP             ： 获取IP地址
+    addNetWordLink    ： 添加一个连接
+    disableNetWordLink： 禁用一个链接
+    removeNetworkLink ： 移除一个链接
+    hiddenSSID        : 不显示SSID
+    displaySSID       : 显示SSID
 ## ConvertUtils -> 类型转换类
     hexStringToBytes: 十六进制字符串转换为byte数组
     bytesToHexString: byte数组转换为十六进制字符串
@@ -239,7 +280,6 @@
     formateDate           : 将字符串转换成日期
     parseStringToDate     : 将字符日期转换成Date
     formatDoubleNumber    : 将double日期转换成String
-    
 ## DensityUtils ->手机常用单位转换的辅助类
     dip2px: 据手机的分辨率从 dip 的单位 转成为 px(像素)
     px2dip: 根据手机的分辨率从 px(像素) 的单位 转成为 dp
@@ -248,46 +288,18 @@
     px2dp : px转dp
     px2sp : px转sp
 ## FileUtils -> 文件管理类
-    hasSdcard    : 检查是否存在SD卡
-    createFileDir: 创建目录
-    delFile      : 删除文件（若为目录，则递归删除子目录和文件）
-    getFileSize  : 取文件大小，单位为byte（若为目录，则包括所有子目录和文件）
-    saveBitmap   : 保存Bitmap到指定目录
-    isFileExists : 判断某目录下文件是否存在
-## ToolAnimation -> 控件点击效果动画工具类
-    addTouchDrak : 给视图添加点击效果,让背景变深
-    addTouchLight: 给视图添加点击效果,让背景变暗
-## ViewUtils -> view管理类
-    removeSelfFromParent: 把自身从父View中移除
-    isTouchInView       : 判断触点是否落在该View上
-## ToolPhone -> 手机相关操作API
-    callPhone            : 直接呼叫指定的号码
-    toCallPhoneActivity  : 跳转至拨号界面
-    sendMessage          : 直接调用短信API发送信息(设置监听发送和接收状态)
-    toSendMessageActivity: 跳转至发送短信界面(自动设置接收方的号码)
-    toChooseContactsList : 跳转至联系人选择界面
-    getChoosedPhoneNumber: 获取选择的联系人的手机号码
-    toCameraActivity     : 跳转至拍照程序界面
-    toImagePickerActivity: 跳转至相册选择界面
-    getChoosedImage      : 获得选中相册的图片
-    openWebSite          : 调用本地浏览器打开一个网页
-    toSettingActivity    : 跳转至系统设置界面
-    toWIFISettingActivity: 跳转至WIFI设置界面
-    openPDFFile          : 启动本地应用打开PDF
-    openWordFile         : 启动本地应用打开PDF
-    openOfficeByWPS      : 调用WPS打开office文档
-    isInstalledApp       : 判断是否安装指定包名的APP
-    isExistActivity      : 判断是否存在指定的Activity
-## ToolFile -> 文件工具类
+    createFileDir      : 创建目录
+    delFile            : 删除文件（若为目录，则递归删除子目录和文件）
+    getFileSize        : 取文件大小，单位为byte（若为目录，则包括所有子目录和文件）
+    saveBitmap         : 保存Bitmap到指定目录
+    isFileExists       : 判断某目录下文件是否存在
     isMountedSDCard    : 检查是否已挂载SD卡镜像（是否存在SD卡）
     gainSDFreeSize     : 获取SD卡剩余容量（单位Byte）
     gainSDAllSize      : 获取SD卡总容量（单位Byte）
     gainSDCardPath     : 获取可用的SD卡路径（若SD卡不没有挂载则返回""）
     readFileByLines    : 以行为单位读取文件内容，一次读一整行，常用于读面向行的格式化文件
-    readFileByLines    : 以行为单位读取文件内容，一次读一整行，常用于读面向行的格式化文件
     saveToFile         : 保存内容
     saveToFile         : 指定编码保存内容
-    appendToFile       : 追加文本
     appendToFile       : 追加文本
     isExsit            : 判断文件是否存在
     read               : 快速读取程序应用包下的文件内容
@@ -304,6 +316,12 @@
     write              : 写入文件
     saveAsJPEG         : 指定目录写入文件内容
     saveAsPNG          : 指定目录写入文件内容
+## ToolAnimation -> 控件点击效果动画工具类
+    addTouchDrak : 给视图添加点击效果,让背景变深
+    addTouchLight: 给视图添加点击效果,让背景变暗
+## ViewUtils -> view管理类
+    removeSelfFromParent: 把自身从父View中移除
+    isTouchInView       : 判断触点是否落在该View上
 ## AppCalculateMgr -> 提供APP应用计算，算法等
     distance        : 两点间的距离
     pointTotoDegrees: 计算点a(x,y)的角度
