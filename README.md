@@ -219,10 +219,10 @@
     getBSSID          : 获取SSID
     getCurrentNetId   : 返回当前连接的网络的ID
     getWifiInfo       : 返回所有信息
-    getIP             ： 获取IP地址
-    addNetWordLink    ： 添加一个连接
-    disableNetWordLink： 禁用一个链接
-    removeNetworkLink ： 移除一个链接
+    getIP             ： 获取IP地址
+    addNetWordLink    ： 添加一个连接
+    disableNetWordLink： 禁用一个链接
+    removeNetworkLink ： 移除一个链接
     hiddenSSID        : 不显示SSID
     displaySSID       : 显示SSID
 ## ConvertUtils -> 类型转换类
@@ -325,7 +325,7 @@
 ## AppCalculateMgr -> 提供APP应用计算，算法等
     distance        : 两点间的距离
     pointTotoDegrees: 计算点a(x,y)的角度
-    checkInRound    : 点在圆内
+    checkInRound    : 点在圆内
 ## SpannableStringUtils -> SpannableString工具类
     Builder.setFlag           : 设置标识
     Builder.setForegroundColor: 设置前景色
