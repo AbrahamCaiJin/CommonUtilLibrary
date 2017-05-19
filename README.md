@@ -91,7 +91,7 @@
     openOfficeByWPS      : 调用WPS打开office文档
     isInstalledApp       : 判断是否安装指定包名的APP
     isExistActivity      : 判断是否存在指定的Activity
-    getBootTimeString    : 获取开机时间
+    getBootTimeString    : 获取开机时间
     printSystemInfo      : 打印系统信息
     getNetType           : 获取网络类型
     getNativePhoneNumber : 获取当前设置的电话号码
