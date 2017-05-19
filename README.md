@@ -325,8 +325,80 @@
 ## AppCalculateMgr -> 提供APP应用计算，算法等
     distance        : 两点间的距离
     pointTotoDegrees: 计算点a(x,y)的角度
-    checkInRound    : 点在圆肉
-    
+    checkInRound    : 点在圆内
+## SpannableStringUtils -> SpannableString工具类
+    Builder.setFlag           : 设置标识
+    Builder.setForegroundColor: 设置前景色
+    Builder.setBackgroundColor: 设置背景色
+    Builder.setQuoteColor     : 设置引用线的颜色
+    Builder.setLeadingMargin  : 设置缩进
+    Builder.setMargin         : 设置间距
+    Builder.setBullet         : 设置列表标记
+    Builder.setFontSize       : 设置字体尺寸
+    Builder.setFontProportion : 设置字体比例
+    Builder.setFontXProportion: 设置字体横向比例
+    Builder.setStrikethrough  : 设置删除线
+    Builder.setUnderline      : 设置下划线
+    Builder.setSuperscript    : 设置上标
+    Builder.setSubscript      : 设置下标
+    Builder.setBold           : 设置粗体
+    Builder.setItalic         : 设置斜体
+    Builder.setBoldItalic     : 设置粗斜体
+    Builder.setFontFamily     : 设置字体系列
+    Builder.setTypeface       : 设置字体
+    Builder.setAlign          : 设置对齐
+    Builder.setBitmap         : 设置图片
+    Builder.setDrawable       : 设置图片
+    Builder.setUri            : 设置图片
+    Builder.setResourceId     : 设置图片
+    Builder.setClickSpan      : 设置点击事件
+    Builder.setUrl            : 设置超链接
+    Builder.setBlur           : 设置模糊
+    Builder.append            : 追加样式字符串
+    Builder.create            : 创建样式字符串
+## SnackbarUtils -> Snackbar工具类
+    ShortSnackbar     : 短显示Snackbar，自定义颜色
+    LongSnackbar      : 长显示Snackbar，自定义颜色
+    IndefiniteSnackbar: 自定义时常显示Snackbar，自定义颜色
+    ShortSnackbar     : 短显示Snackbar，可选预设类型
+    LongSnackbar      : 显示Snackbar，可选预设类型
+    IndefiniteSnackbar: 自定义时常显示Snackbar，可选预设类型
+    setSnackbarColor  : 设置Snackbar背景颜色
+    setSnackbarColor  : 设置Snackbar文字和背景颜色
+    SnackbarAddView   : 向Snackbar中添加view
+## PicassoUtils -> Picasso图片加载工具类
+    getinstance               : 单例对象
+    LoadImage                 : 加载图片
+    LoadImageWithWidtAndHeight: 加载图片,设置宽高,图片默认居中(centerCrop())
+## GlideUtils -> Glide图片加载工具类
+    instance                         : 单例对象
+    LoadContextBitmap                : Glide请求图片，会受到Context生命周期控制
+    LoadFragmentBitmap               : Glide请求图片，会受到Fragment生命周期控制
+    LoadSupportv4FragmentBitmap      : Glide请求图片，会受到support.v4.app.Fragment生命周期控制
+    LoadContextCircleBitmap          : 加载设置圆形图片
+    LoadfragmentCircleBitmap         : Glide请求图片设置圆形，会受到android.app.Fragment生命周期控制
+    LoadSupportv4FragmentCircleBitmap: Glide请求图片设置圆形，会受到android.support.v4.app.Fragment生命周期控制
+    LoadContextRoundBitmap           : 加载设置圆角图片
+    LoadfragmentRoundBitmap          : Glide请求图片设置圆角，会受到android.app.Fragment生命周期控制
+    LoadSupportv4FragmentRoundBitmap : Glide请求图片设置圆角，会受到android.support.v4.app.Fragment生命周期控制
+    LoadContextBlurBitmap            : Glide加载模糊图片
+    LoadFragmentBlurBitmap           : Glide加载模糊图片会受到Fragment生命周期控制
+    LoadSupportv4FragmentBlurBitmap  : Glide加载模糊图片会受到support.v4.app.Fragment生命周期控制
+    LoadContextRotateBitmap          : 旋转图片
+    LoadFragmentRotateBitmap         : Glide加载旋转图片会受到Fragment生命周期控制
+    LoadSupportv4FragmentRotateBitmap: Glide加载旋转图片会受到support.v4.app.Fragment生命周期控制
+## FrescoUtils -> Fresco图片加载工具类
+    initConfig             : 初始化配置
+    initImagePipelineConfig: 单例
+    init                   : 默认加载图片和失败图片
+    configureCaches        : 初始化配置
+    setImageURI            : 开始加载图片
+    changeImgSize          : 自定义图片尺寸
+    loadGif                : 加载gif图
+    moreImgRequst          : 多图请求需自定义ImageRequest(图片预览)
+    localImg               : 缩略图预览(仅支持本地图片,并且是JPEG图片格式)
+    loadImage              : 请求图片
+    getImageDecodeOptions  : 图片解码
 ## About
     这里把开发中常用的一些工具类做一个整理，主要用到的时候不用再费力的百度或者Google了，大家有需要的可以随时借鉴走，同时也希望这个越来越强大，有什么错误的地方还希望各位不吝指出，让我得以完善，当然，在此声明，这些并不是我一个人，也用了许多前辈们的东西，这里一并感谢，目前还在测试，还没有上传到Jcenter，需要的自己拷贝，测试完成后会给大家贴出引用地址的，持续更新中。<br />
     我的qq群：523167548<br />
