@@ -1,10 +1,10 @@
 # API
 
-## BankCheck -> 银行卡管理 
+## 银行卡管理 → [BankCheck](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/BankCheck.java)
     checkBankCard       : 校验银行卡卡号是否合法
     getBankCardCheckCode: 从不含校验位的银行卡卡号采用 Luhm 校验算法获得校验位
     getNameOfBank       : 通过银行卡的前六位确定判断银行开户行及卡种
-## AppSharePreferenceMgr -> SharePreference缓存数据
+## SharePreference缓存数据 → [AppSharePreferenceMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppSharePreferenceMgr.java)
     put     : 保存数据的方法
     get     : 获取数据的方法
     putImage: 保存图片到SharedPreferences
@@ -13,8 +13,8 @@
     clear   : 清除所有数据
     contains: 查询某个key是否已经存在
     getAll  : 返回所有的键值对<br>
-## AppCleanMgr -> 提供App数据清理工作的类
-    cleanInternalCache   ： 清除本应用内部缓存数据
+## 提供App数据清理工作的类 → [AppCleanMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppCleanMgr.java)
+    cleanInternalCache   ： 清除本应用内部缓存数据
     cleanExternalCache   ： 清除本应用外部缓存数据
     cleanDatabases       ： 清除本应用所有数据库
     cleanSharedPreference： 清除本应用SharedPreference
@@ -22,9 +22,9 @@
     cleanFiles           ： 清除本应用files文件
     cleanApplicationData ： 清除本应用所有的数据
     getAppClearSize      ： 获取App应用缓存的大小
-## AppExit2Back -> App应用退出
-    exitApp: 退出App程序应用
-## AppDavikActivityMgr -> 管理和回收Activity
+## App应用退出 → [AppExit2Back](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppExit2Back.java)
+    exitApp: 退出App程序应用
+## 管理和回收Activity → [AppDavikActivityMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppDavikActivityMgr.java)
     getScreenManager      : 单例堆栈集合对象
     removeActivity        : 堆栈中销毁并移除
     removeAllActivity     : 栈中销毁并移除所有Act对象
@@ -32,17 +32,17 @@
     getCurrentActivityName: 获得当前Act的类名
     addActivity           : 将Act纳入推栈集合中
     exitApp               : 退出栈中所有Activity
-## AppApplicationMgr -> 获取App应用版本信息
+## 获取App应用版本信息 → [AppApplicationMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppApplicationMgr.java)
     getAppName    : 获取本地apk的名称
     getVersionName: 获取本地Apk版本名称
     getVersionCode: 获取本地Apk版本号
     getMetaData   : 根据key获取xml中Meta的值
-## AppKeyBoardMgr -> 软键盘管理
+## 软键盘管理 → [AppKeyBoardMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppKeyBoardMgr.java)
     openKeybord      : 打卡软键盘
     closeKeybord     : 关闭软键盘
     TimerHideKeyboard: 通过定时器强制隐藏虚拟键盘
     isKeybord        : 输入法是否显示
-## AppLogMessageMgr -> 系统日志输出工具类
+## 系统日志输出工具类 → [AppLogMessageMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppLogMessageMgr.java)
     isEnableDebug: 设置log总开关,debug模式(true:打印日志  false：不打印)
     i            : Info日志
     d            : Debug日志
@@ -50,7 +50,7 @@
     v            : Verbose日志
     e            : Error日志
 ###### 这里推荐使用凯子哥的日志管理工具,灰常好用，我也集成到了我的项目里面，KLog对超长字符串进行处理，保证全部的字符串都可以打印出来，再也没有了只能打印一部分的问题了，部分使用方法如下
-## KLog -> 系统日志输出工具类
+## 系统日志输出工具类 → [KLog](https://github.com/AbrahamCaiJin/CommonUtilLibrary/tree/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/klog)
     init: 设置log总开关,debug模式(true:打印日志  false：不打印)
     a   : assert日志或者打印是否执行到这里等
     i   : Info日志或者打印是否执行到这里等
@@ -62,11 +62,11 @@
     xml : 输出xml的格式字符串
     file: 保存到文件
 ###### 更多使用方法信息点击这里查看：[KLog](http://kaizige.vip/2016/06/13/klog/)
-## AppNetworkMgr -> App网络管理
+## App网络管理 → [AppNetworkMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppNetworkMgr.java)
     getNetworkState   : 获取当前手机连接的网络类型
     isNetworkConnected: 判断网络是否连接
     openNetSetting    : 打开网络设置界面
-## AppPhoneMgr -> 手机管理工具类
+## 手机管理工具类 → [AppPhoneMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppPhoneMgr.java)
     getInstance          : 单例对象
     getSDKVersionNumber  : 获取手机系统版本号
     getPhoneModel        : 获取手机型号
@@ -108,7 +108,7 @@
     getNetType           : 获取网络类型
     getNativePhoneNumber : 获取当前设置的电话号码
     getMacAddress        : 获取 MAC 地址
-## AppReflectionMgr -> 反射工具类
+## 反射工具类 → [AppReflectionMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppReflectionMgr.java)
     getProperty          : 得到某个对象的公共属性
     getStaticProperty    : 得到某类的静态公共属性
     invokeMethod         : 执行某对象方法
@@ -117,12 +117,12 @@
     isInstance           : 是不是某个类的实例
     getByArray           : 得到数组中的某个元素
     GetClassListByPackage: 得到类的集合
-## AppResourceMgr -> 获取本地指定资源信息
+## 获取本地指定资源信息 → [AppResourceMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppResourceMgr.java)
     getStringByAssets: 根据本地Assets目录下资源名称，获取String数据信息
     getListByAssets  : 根据本地Assets目录下资源名称，获取List集合信息
     getStringByRaw   : 根据本地Raw目录下资源标识，获取String数据信息
     getListByRaw     : 根据本地Raw目录下资源标识，获取List集合信息
-## AppScreenMgr -> 有关Android屏幕的工具类
+## 有关Android屏幕的工具类 → [AppScreenMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppScreenMgr.java)
     getScreenWidth          : 获得屏幕宽度
     getScreenHeight         : 获得屏幕高度
     getStatusHeight         : 获得状态栏的高度
@@ -130,7 +130,7 @@
     getNavigationAreaHeight : 获取虚拟按键区域的高度
     snapShotWithStatusBar   : 获取当前屏幕截图，包含状态栏
     snapShotWithoutStatusBar: 获取当前屏幕截图，不包含状态栏
-## AppSysMgr -> 获取App应用系统基本信息
+## 获取App应用系统基本信息 → [AppSysMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppSysMgr.java)
     getSysClientOs             : 获得客户端操作系统名称
     getSysSdk                  : 获取当前操作系统的sdk版本
     getSysLanguage             : 获取当前操作系统的语言
@@ -153,7 +153,7 @@
     getSysSampleSize           : 获取当前APP应用的SampleSize大小
     getVibrator                : 获取震动器对象
     getSysLocalIpAddress       : 获取手机IP地址
-## AppToastMgr -> 自定义Toast提示框
+## 自定义Toast提示框 → [AppToastMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppToastMgr.java)
     shortToast            : 自定义Toast调用
     longToast             : 自定义Toast调用
     cancelToast           : 取消显示Toast
@@ -177,7 +177,7 @@
     ToastLongTopCenter    : 屏幕顶部中心位置长时间显示Toast
     ToastLongTopLeft      : 屏幕顶部左边位置长时间显示Toast
     ToastLongTopRight     : 屏幕顶部右边位置长时间显示Toast
-## AppValidationMgr -> 正则表达式
+## 正则表达式 → [AppValidationMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppValidationMgr.java)
     isEmpty              : 验证是否为空串 (包括空格、制表符、回车符、换行符组成的字符串 若输入字符串为null或空字符串,返回true)
     isNotEmpty           : 是否不为空
     isNotZero            : 验证非零正整数
@@ -212,7 +212,7 @@
     getSizeDesc          : 获取大小的描述
     ip2int               : ip地址转换为10进制数
     gainUUID             : 获取UUID
-## AppWifiHelperMgr -> Wifi管理工具类
+## Wifi管理工具类 → [AppWifiHelperMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppWifiHelperMgr.java)
     isWifiEnabled     : Wifi状态
     openWifi          : 打开wifi
     closeWifi         : 关闭Wifi
@@ -237,14 +237,14 @@
     removeNetworkLink ： 移除一个链接
     hiddenSSID        : 不显示SSID
     displaySSID       : 显示SSID
-## ConvertUtils -> 类型转换类
+## 类型转换类 → [ConvertUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/ConvertUtils.java)
     hexStringToBytes: 十六进制字符串转换为byte数组
     bytesToHexString: byte数组转换为十六进制字符串
     charToByte      : char转换为byte数组 
     intToByte       : int转换为byte数组
     byteToInt       : byte数组转换为int
     saveDecimals    : 保留几位小数
-## AppDateMgr -> 日期管理类
+## 日期管理类 → [AppDateMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppDateMgr.java)
     todayYyyyMmDd         : 当天的年月日
     todayHhMmSs           : 当天的时分秒
     todayYyyyMmDdHhMmSs   : 当天的年月日时分秒
@@ -292,14 +292,14 @@
     formateDate           : 将字符串转换成日期
     parseStringToDate     : 将字符日期转换成Date
     formatDoubleNumber    : 将double日期转换成String
-## DensityUtils ->手机常用单位转换的辅助类
+## 手机常用单位转换的辅助类 → [DensityUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/DensityUtils.java)
     dip2px: 据手机的分辨率从 dip 的单位 转成为 px(像素)
     px2dip: 根据手机的分辨率从 px(像素) 的单位 转成为 dp
     dp2px : dp转px
     sp2px : sp转px
     px2dp : px转dp
     px2sp : px转sp
-## FileUtils -> 文件管理类
+## 文件管理类 → [FileUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/FileUtils.java)
     createFileDir      : 创建目录
     delFile            : 删除文件（若为目录，则递归删除子目录和文件）
     getFileSize        : 取文件大小，单位为byte（若为目录，则包括所有子目录和文件）
@@ -328,17 +328,17 @@
     write              : 写入文件
     saveAsJPEG         : 指定目录写入文件内容
     saveAsPNG          : 指定目录写入文件内容
-## ToolAnimation -> 控件点击效果动画工具类
+## 控件点击效果动画工具类 → [ToolAnimation](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/ToolAnimation.java)
     addTouchDrak : 给视图添加点击效果,让背景变深
     addTouchLight: 给视图添加点击效果,让背景变暗
-## ViewUtils -> view管理类
+## view管理类 → [ViewUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/ViewUtils.java)
     removeSelfFromParent: 把自身从父View中移除
     isTouchInView       : 判断触点是否落在该View上
-## AppCalculateMgr -> 提供APP应用计算，算法等
+## 提供APP应用计算，算法等 -> [AppCalculateMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppCalculateMgr.java)
     distance        : 两点间的距离
     pointTotoDegrees: 计算点a(x,y)的角度
     checkInRound    : 点在圆内
-## SpannableStringUtils -> SpannableString工具类
+## SpannableString工具类 → [SpannableStringUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/SpannableStringUtils.java)
     Builder.setFlag           : 设置标识
     Builder.setForegroundColor: 设置前景色
     Builder.setBackgroundColor: 设置背景色
@@ -368,7 +368,7 @@
     Builder.setBlur           : 设置模糊
     Builder.append            : 追加样式字符串
     Builder.create            : 创建样式字符串
-## SnackbarUtils -> Snackbar工具类
+## Snackbar工具类 → [SnackbarUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/SnackbarUtils.java)
     ShortSnackbar     : 短显示Snackbar，自定义颜色
     LongSnackbar      : 长显示Snackbar，自定义颜色
     IndefiniteSnackbar: 自定义时常显示Snackbar，自定义颜色
@@ -378,11 +378,11 @@
     setSnackbarColor  : 设置Snackbar背景颜色
     setSnackbarColor  : 设置Snackbar文字和背景颜色
     SnackbarAddView   : 向Snackbar中添加view
-## PicassoUtils -> Picasso图片加载工具类
+## Picasso图片加载工具类 → [PicassoUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/PicassoUtils.java)
     getinstance               : 单例对象
     LoadImage                 : 加载图片
     LoadImageWithWidtAndHeight: 加载图片,设置宽高,图片默认居中(centerCrop())
-## GlideUtils -> Glide图片加载工具类
+## Glide图片加载工具类 → [GlideUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/GlideUtils.java)
     instance                         : 单例对象
     LoadContextBitmap                : Glide请求图片，会受到Context生命周期控制
     LoadFragmentBitmap               : Glide请求图片，会受到Fragment生命周期控制
@@ -399,7 +399,7 @@
     LoadContextRotateBitmap          : 旋转图片
     LoadFragmentRotateBitmap         : Glide加载旋转图片会受到Fragment生命周期控制
     LoadSupportv4FragmentRotateBitmap: Glide加载旋转图片会受到support.v4.app.Fragment生命周期控制
-## FrescoUtils -> Fresco图片加载工具类
+## Fresco图片加载工具类 → [FrescoUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/FrescoUtils.java)
     initConfig             : 初始化配置
     initImagePipelineConfig: 单例
     init                   : 默认加载图片和失败图片
@@ -411,7 +411,7 @@
     localImg               : 缩略图预览(仅支持本地图片,并且是JPEG图片格式)
     loadImage              : 请求图片
     getImageDecodeOptions  : 图片解码
-## AppBigDecimal -> 资金运算工具类
+## 资金运算工具类 → [AppBigDecimal](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppBigDecimal.java)
     add              : 提供精确的加法运算
     substract        : 提供精确的减法运算
     multiply         : 提供精确的乘法运算
@@ -421,9 +421,9 @@
     formatMoney      : 金额分割，四舍五人金额
     compareBigDecimal: 比较大小
     adjustDouble     : 获取自己想要的数据格式
-## WebServiceUtils -> WebService网络工具类
+## WebService网络工具类 → [WebServiceUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/WebServiceUtils.java)
     callWebService: 请求网络数据
-## HttpURLConnectionUtils -> HttpURLConnection网络工具类
+## HttpURLConnection网络工具类 → [HttpURLConnectionUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/HttpURLConnectionUtils.java)
     doGetAsyn: 异步的Get请求
     doPostAsyn: 异步的Post请求
     doGet: Get请求，获得返回数据
