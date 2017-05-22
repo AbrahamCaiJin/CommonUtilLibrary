@@ -49,7 +49,19 @@
     w            : Warn日志
     v            : Verbose日志
     e            : Error日志
-    这里推荐使用凯子哥的日志管理工具,灰常好用:[KLog](http://kaizige.vip/2016/06/13/klog/)
+###### 这里推荐使用凯子哥的日志管理工具,灰常好用，我也集成到了我的项目里面，KLog对超长字符串进行处理，保证全部的字符串都可以打印出来，再也没有了只能打印一部分的问题了，部分使用方法如下
+## KLog -> 系统日志输出工具类
+    init: 设置log总开关,debug模式(true:打印日志  false：不打印)
+    a   : assert日志或者打印是否执行到这里等
+    i   : Info日志或者打印是否执行到这里等
+    d   : Debug日志或者打印是否执行到这里等
+    w   : Warn日志或者打印是否执行到这里等
+    v   : Verbose日志或者打印是否执行到这里等
+    e   : Error日志或者打印是否执行到这里等
+    json: 输出Json的格式字符串
+    xml : 输出xml的格式字符串
+    file: 保存到文件
+###### 更多使用方法信息点击这里查看：[KLog](http://kaizige.vip/2016/06/13/klog/)
 ## AppNetworkMgr -> App网络管理
     getNetworkState   : 获取当前手机连接的网络类型
     isNetworkConnected: 判断网络是否连接
