@@ -398,7 +398,24 @@
     moreImgRequst          : 多图请求需自定义ImageRequest(图片预览)
     localImg               : 缩略图预览(仅支持本地图片,并且是JPEG图片格式)
     loadImage              : 请求图片
-    getImageDecodeOptions  : 图片解码
+    getImageDecodeOptions  : 图片解码
+## AppBigDecimal -> 资金运算工具类
+    add              : 提供精确的加法运算
+    substract        : 提供精确的减法运算
+    multiply         : 提供精确的乘法运算
+    divide           : 提供（相对）精确的除法运算.当发生除不尽的情况时,由scale参数指 定精度,以后的数字四舍五入. 
+    round            : 提供精确的小数位四舍五入处理
+    remainder        : 取余数
+    formatMoney      : 金额分割，四舍五人金额
+    compareBigDecimal: 比较大小
+    adjustDouble     : 获取自己想要的数据格式
+## WebServiceUtils -> WebService网络工具类
+    callWebService: 请求网络数据
+## HttpURLConnectionUtils -> HttpURLConnection网络工具类
+    doGetAsyn: 异步的Get请求
+    doPostAsyn: 异步的Post请求
+    doGet: Get请求，获得返回数据
+    doPost: 向指定 URL 发送POST方法的请求
 ## About
     这里把开发中常用的一些工具类做一个整理，主要用到的时候不用再费力的百度或者Google了，大家有需要的可以随时借鉴走，同时也希望这个越来越强大，有什么错误的地方还希望各位不吝指出，让我得以完善，当然，在此声明，这些并不是我一个人，也用了许多前辈们的东西，这里一并感谢，目前还在测试，还没有上传到Jcenter，需要的自己拷贝，测试完成后会给大家贴出引用地址的，持续更新中。<br />
     我的qq群：523167548<br />
