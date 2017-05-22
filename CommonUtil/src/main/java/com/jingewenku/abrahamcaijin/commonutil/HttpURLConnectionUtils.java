@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * 主要功能：HttpURLConnection工具类
+ * 主要功能：HttpURLConnection网络工具类
  *
  * @Prject: CommonUtilLibrary
  * @Package: com.jingewenku.abrahamcaijin.commonutil
@@ -75,7 +75,7 @@ public class HttpURLConnectionUtils {
     }
 
     /**
-     * Get请求，获得返回数
+     * Get请求，获得返回数据
      * @param urlStr
      * @return
      * @throws Exception

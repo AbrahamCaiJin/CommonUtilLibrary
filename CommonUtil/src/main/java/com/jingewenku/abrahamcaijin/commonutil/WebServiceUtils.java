@@ -18,7 +18,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @Description:主要功能:WebService工具类
+ * @Description:主要功能:WebService网络工具类
  * @Prject: CommonUtilLibrary
  * @Package: com.jingewenku.abrahamcaijin.commonutil
  * @author: AbrahamCaiJin
@@ -38,7 +38,7 @@ public class WebServiceUtils {
 
 
     /**
-     *
+     *请求网络数据
      * @param url
      *            WebService服务器地址
      * @param methodName
