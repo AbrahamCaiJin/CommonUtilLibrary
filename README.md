@@ -398,7 +398,7 @@
     moreImgRequst          : 多图请求需自定义ImageRequest(图片预览)
     localImg               : 缩略图预览(仅支持本地图片,并且是JPEG图片格式)
     loadImage              : 请求图片
-    getImageDecodeOptions  : 图片解码
+    getImageDecodeOptions  : 图片解码
 ## AppBigDecimal -> 资金运算工具类
     add              : 提供精确的加法运算
     substract        : 提供精确的减法运算
