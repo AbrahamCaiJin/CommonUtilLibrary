@@ -438,9 +438,9 @@
     rotateBitmap               : 图片旋转
     getBitmapFromUri           : 根据uri获取图片
     getPicPathFromUri          : 图片uri转path
-    getSmallBitmap             : 根据路径获得图片并压缩返回bitmap用于显示
+    getSmallBitmap             : 根据路径获得图片并压缩返回bitmap用于显示
     decodeBitmap               : 从文件中获取图片
-    computeSampleSize          : 使用该算法，就可动态计算出图片的inSampleSize。
+    computeSampleSize          : 使用该算法，就可动态计算出图片的inSampleSize
     applyDimension             : 长度单位转换
 ## 资金运算工具类 → [AppBigDecimal](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppBigDecimal.java)
     add              : 提供精确的加法运算
