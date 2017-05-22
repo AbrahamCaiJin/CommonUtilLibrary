@@ -411,6 +411,37 @@
     localImg               : 缩略图预览(仅支持本地图片,并且是JPEG图片格式)
     loadImage              : 请求图片
     getImageDecodeOptions  : 图片解码
+## 图片管理工具类 → [AppImageMgr]()
+    getBitmap                  : 根据drawable id获取Bitmap
+    getDrawable                : 根据drawable id获取Drawable
+    bitmapToDrawble            : bitmap转drawable
+    readDrawableBitmap         : 以最省内存的方式读取本地资源的图片
+    readDrawableBigBitmap      : 读取本地drawable中较大的资源图片
+    getBitmapFromFile          : 从文件得到BitMap
+    getBitmapByteArray         : 从数组得到Bitmap
+    getBitmapFromStream        : 从流中得到Bitmap
+    setAlpha                   : 图片透明度处理
+    getImgCacheFromLocal2Bitmap: 获取源图片的BITMAP，压缩，本地图片
+    getBitmap2Byte             : bitmap转byte[]
+    decodeBitmapToThumbnail    : 获取缩略图
+    saveImage                  : 保存图片
+    grayMasking                : 光晕效果
+    getBitmapSize              : 获取bitmap的字节大小
+    convertToBlackWhite        : 将彩色图转换为黑白图
+    convertToRoundedCorner     : 转换成圆角
+    BoxBlurFilter              : 高斯模糊
+    getCircleBitmap            : 圆形图片
+    getRoundedCornerBitmap     : 获取圆角
+    lessenBitmap               : 按比例缩小图片（单位像素） lessen the bitmap
+    readPictureDegree          : 判断图片旋转情况
+    rotaingImageView           : 旋转图片
+    rotateBitmap               : 图片旋转
+    getBitmapFromUri           : 根据uri获取图片
+    getPicPathFromUri          : 图片uri转path
+    getSmallBitmap             : 根据路径获得图片并压缩返回bitmap用于显示
+    decodeBitmap               : 从文件中获取图片
+    computeSampleSize          : 使用该算法，就可动态计算出图片的inSampleSize。
+    applyDimension             : 长度单位转换
 ## 资金运算工具类 → [AppBigDecimal](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppBigDecimal.java)
     add              : 提供精确的加法运算
     substract        : 提供精确的减法运算
@@ -427,7 +458,23 @@
     doGetAsyn : 异步的Get请求
     doPostAsyn: 异步的Post请求
     doGet     : Get请求，获得返回数据
-    doPost    : 向指定 URL 发送POST方法的请求
+    doPost    : 向指定 URL 发送POST方法的请求
+## AES对称加密 → [AESUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/encryption/AESUtils.java)
+    initKey ： 生成密钥
+    encrypt ： 加密
+    decrypt ： 解密
+## DES对称加密 → [DESUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/encryption/DESUtils.java)
+    initKey : 生成密钥
+    encrypt : DES 加密
+    decrypt : DES 解密
+## MD5加密 → [MD5Utils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/encryption/MD5Utils.java)
+    encryptMD5 : MD5加密
+## SHA-1加密不可逆 → [SHAUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/encryption/SHAUtils.java)
+    encryptSHA : SHA-512 加密
+## 3DES对称加密 → [TripleDESUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/encryption/TripleDESUtils.java)
+    initKey : 生成密钥
+    encrypt : 3DES 加密
+    decrypt : 3DES 解密
 ## About
     这里把开发中常用的一些工具类做一个整理，主要用到的时候不用再费力的百度或者Google了，大家有需要的可以随时借鉴走，同时也希望这个越来越强大，有什么错误的地方还希望各位不吝指出，让我得以完善，当然，在此声明，这些并不是我一个人，也用了许多前辈们的东西，这里一并感谢，目前还在测试，还没有上传到Jcenter，需要的自己拷贝，测试完成后会给大家贴出引用地址的，持续更新中。<br />
     我的qq群：523167548<br />
