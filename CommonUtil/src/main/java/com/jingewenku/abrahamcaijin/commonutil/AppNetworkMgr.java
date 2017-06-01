@@ -184,4 +184,23 @@ public class AppNetworkMgr {
         intent.setAction("android.intent.action.VIEW");
         activity.startActivityForResult(intent, 0);
     }
+
+    /**
+     * 检测3G是否连接
+     *
+     * @param context 上下文
+     * @return 结果
+     */
+    public static boolean is3gConnected(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (cm != null) {
+            NetworkInfo networkInfo = cm.getActiveNetworkInfo();
+            if (networkInfo != null
+                && networkInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
