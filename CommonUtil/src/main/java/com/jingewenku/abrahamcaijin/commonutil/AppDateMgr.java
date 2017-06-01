@@ -1035,4 +1035,45 @@ public class AppDateMgr {
         DecimalFormat df = new DecimalFormat("#");
         return df.format(number);
     }
+
+//    /**
+//     * 身份证号转生日
+//     *
+//     * @param identityCard 身份证
+//     * @return 生日
+//     */
+//    public static Date identityCard2Date(String identityCard) {
+//        try {
+//            String dateStr;
+//            if (identityCard.length() == 18) {
+//                dateStr = identityCard.substring(6, 14);// 截取18位身份证身份证中生日部分
+//                return formatDateString(dateStr, "yyyyMMdd");
+//            }
+//            if (identityCard.length() == 15) {
+//                dateStr = identityCard.substring(6, 12);// 截取15位身份证中生日部分
+//                return formatDateString(dateStr, "yyMMdd");
+//            }
+//            return null;
+//        } catch (Exception e) {
+//            return null;
+//        }
+//    }
+//
+//    /**
+//     * 格式化日期时间字符串
+//     *
+//     * @param dateString 日期时间字符串
+//     * @param pattern    模式
+//     * @return Date对象
+//     */
+//    public static Date formatDateString(String dateString, String pattern) {
+//        try {
+//            DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(pattern);
+//            return dateTimeFormatter.parseDateTime(dateString).toDate();
+//        } catch (Exception e) {
+//            return null;
+//        }
+//    }
+
+
 }
