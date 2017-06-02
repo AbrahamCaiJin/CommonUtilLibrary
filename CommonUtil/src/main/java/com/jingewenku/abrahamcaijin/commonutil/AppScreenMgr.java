@@ -2,6 +2,7 @@ package com.jingewenku.abrahamcaijin.commonutil;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.util.DisplayMetrics;
@@ -117,6 +118,18 @@ public class AppScreenMgr {
 
         return realScreenHeight - screenHeight;
     }
+
+    /**
+     * 获取导航栏高度
+     * @param c
+     * @return
+     */
+    public static int getNavigationBarrH(Context c) {
+        Resources resources = c.getResources();
+        int identifier = resources.getIdentifier("navigation_bar_height", "dimen", "android");
+        return resources.getDimensionPixelOffset(identifier);
+    }
+
     private AppScreenMgr()
     {
         /* cannot be instantiated */
