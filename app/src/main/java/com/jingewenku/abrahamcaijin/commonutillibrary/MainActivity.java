@@ -1,10 +1,11 @@
 package com.jingewenku.abrahamcaijin.commonutillibrary;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import com.jingewenku.abrahamcaijin.commonutil.AppSharePreferenceMgr;
 import com.jingewenku.abrahamcaijin.commonutil.AppToastMgr;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         txtShow.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppToastMgr.shortToast(MainActivity.this, "显示测试成功");
+                AppSharePreferenceMgr.put(MainActivity.this, "test", "显示测试用例");
+                AppToastMgr.shortToast(MainActivity.this,  AppSharePreferenceMgr.get(MainActivity.this, "test", "显示测试用例") + "" );
             }
         });
     }
