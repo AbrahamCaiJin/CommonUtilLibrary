@@ -912,7 +912,6 @@ public class AppNetworkMgr {
         return true;
     }
 
-
     /**
      * 判断移动网络是否打开，需要ACCESS_NETWORK_STATE权限
      *
@@ -924,7 +923,6 @@ public class AppNetworkMgr {
             Context.CONNECTIVITY_SERVICE)).getNetworkInfo(
             ConnectivityManager.TYPE_MOBILE)).isConnected();
     }
-
 
     /**
      * 获取本机IP地址
