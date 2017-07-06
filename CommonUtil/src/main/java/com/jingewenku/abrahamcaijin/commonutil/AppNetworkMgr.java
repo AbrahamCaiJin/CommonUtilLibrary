@@ -879,7 +879,6 @@ public class AppNetworkMgr {
         }
     }
 
-
     /**
      * 判断Wifi是否打开，需要ACCESS_WIFI_STATE权限
      *
