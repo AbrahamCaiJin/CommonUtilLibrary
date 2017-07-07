@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AppSharePreferenceMgr.put(MainActivity.this, "test", "显示测试用例");
-                AppToastMgr.shortToast(MainActivity.this,  AppSharePreferenceMgr.get(MainActivity.this, "test", "显示测试用例") + "" );
+                if (AppSharePreferenceMgr.contains(MainActivity.this, "test")) {
+                    AppToastMgr.shortToast(MainActivity.this, AppSharePreferenceMgr.get(MainActivity.this, "test", "") + "");
+                }
             }
         });
     }
