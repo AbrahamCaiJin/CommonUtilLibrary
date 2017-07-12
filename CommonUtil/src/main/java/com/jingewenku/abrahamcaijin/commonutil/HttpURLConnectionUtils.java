@@ -1,4 +1,4 @@
-﻿package com.jingewenku.abrahamcaijin.commonutil;
+package com.jingewenku.abrahamcaijin.commonutil;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
