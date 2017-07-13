@@ -1,18 +1,28 @@
 package com.jingewenku.abrahamcaijin.commonutil;
 
+import android.app.DownloadManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Environment;
 import android.os.StatFs;
+import android.text.format.Formatter;
 import android.util.Log;
 import com.jingewenku.abrahamcaijin.commonutil.klog.KLog;
 
 import java.io.*;
+import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
+
+import static com.jingewenku.abrahamcaijin.commonutil.AppFileMgr.closeIO;
+import static com.jingewenku.abrahamcaijin.commonutil.AppValidationMgr.convertStreamToString;
 
 /**
  * @Description:主要功能:文件管理
@@ -824,5 +834,303 @@ public class FileUtils {
             }
         }
     }
+
+    /**
+     * 将文件转成字符串
+     *
+     * @param file
+     *            文件
+     * @return
+     * @throws Exception
+     */
+    public static String getStringFromFile(File file) throws Exception {
+        FileInputStream fin = new FileInputStream(file);
+        String ret = convertStreamToString(fin);
+        // Make sure you close all streams.
+        fin.close();
+        return ret;
+    }
+
+    /**
+     * 复制文件
+     * @param in
+     * @param out
+     */
+    public static void copyFile(InputStream in, OutputStream out) {
+        try {
+            byte[] b = new byte[2 * 1024 * 1024]; //2M memory
+            int len = -1;
+            while ((len = in.read(b)) > 0) {
+                out.write(b, 0, len);
+                out.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            closeIO(in, out);
+        }
+    }
+
+    /**
+     *快速复制
+     * @param in
+     * @param out
+     */
+    public static void copyFileFast(File in, File out) {
+        FileChannel filein = null;
+        FileChannel fileout = null;
+        try {
+            filein = new FileInputStream(in).getChannel();
+            fileout = new FileOutputStream(out).getChannel();
+            filein.transferTo(0, filein.size(), fileout);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            closeIO(filein, fileout);
+        }
+    }
+
+    /**
+     *分享文件
+     * @param context
+     * @param title
+     * @param filePath
+     */
+    public static void shareFile(Context context, String title, String filePath) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        Uri uri = Uri.parse("file://" + filePath);
+        intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_STREAM, uri);
+        context.startActivity(Intent.createChooser(intent, title));
+    }
+
+    /**
+     *压缩
+     * @param is
+     * @param os
+     */
+    public static void zip(InputStream is, OutputStream os) {
+        GZIPOutputStream gzip = null;
+        try {
+            gzip = new GZIPOutputStream(os);
+            byte[] buf = new byte[1024];
+            int len;
+            while ((len = is.read(buf)) != -1) {
+                gzip.write(buf, 0, len);
+                gzip.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            closeIO(is, gzip);
+        }
+    }
+
+    /**
+     *解压
+     * @param is
+     * @param os
+     */
+    public static void unzip(InputStream is, OutputStream os) {
+        GZIPInputStream gzip = null;
+        try {
+            gzip = new GZIPInputStream(is);
+            byte[] buf = new byte[1024];
+            int len;
+            while ((len = gzip.read(buf)) != -1) {
+                os.write(buf, 0, len);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            closeIO(gzip, os);
+        }
+    }
+
+    /**
+     * 格式化文件大小
+     * @param context
+     * @param size
+     * @return
+     */
+    public static String formatFileSize(Context context, long size) {
+        return Formatter.formatFileSize(context, size);
+    }
+
+    /**
+     * 将输入流写入到文件
+     * @param is
+     * @param file
+     */
+    public static void Stream2File(InputStream is, File file) {
+        byte[] b = new byte[1024];
+        int len;
+        FileOutputStream os = null;
+        try {
+            os = new FileOutputStream(file);
+            while ((len = is.read(b)) != -1) {
+                os.write(b, 0, len);
+                os.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            closeIO(is, os);
+        }
+    }
+
+    /**
+     * 创建文件夹(支持覆盖已存在的同名文件夹)
+     * @param filePath
+     * @param recreate
+     * @return
+     */
+    public static boolean createFolder(String filePath, boolean recreate) {
+        String folderName = getFolderName(filePath);
+        if (folderName == null || folderName.length() == 0 || folderName.trim().length() == 0) {
+            return false;
+        }
+        File folder = new File(folderName);
+        if (folder.exists()) {
+            if (recreate) {
+                deleteFile(folderName);
+                return folder.mkdirs();
+            } else {
+                return true;
+            }
+        } else {
+            return folder.mkdirs();
+        }
+    }
+
+    public static boolean deleteFile(String filename) {
+        return new File(filename).delete();
+    }
+
+    /**
+     * 获取文件名
+     * @param filePath
+     * @return
+     */
+    public static String getFileName(String filePath) {
+        if (AppStringUtils.isEmpty(filePath)) {
+            return filePath;
+        }
+
+        int filePosi = filePath.lastIndexOf(File.separator);
+        return (filePosi == -1) ? filePath : filePath.substring(filePosi + 1);
+    }
+
+    /**
+     * 重命名文件\文件夹
+     * @param filepath
+     * @param newName
+     * @return
+     */
+    public static boolean rename(String filepath, String newName) {
+        File file = new File(filepath);
+        return file.exists() && file.renameTo(new File(newName));
+    }
+
+    /**
+     * 获取文件夹名称
+     * @param filePath
+     * @return
+     */
+    public static String getFolderName(String filePath) {
+        if (filePath == null || filePath.length() == 0 || filePath.trim().length() == 0) {
+            return filePath;
+        }
+        int filePos = filePath.lastIndexOf(File.separator);
+        return (filePos == -1) ? "" : filePath.substring(0, filePos);
+    }
+
+    /**
+     * 获取文件夹下所有文件
+     * @param path
+     * @return
+     */
+    public static ArrayList<File> getFilesArray(String path) {
+        File file = new File(path);
+        File files[] = file.listFiles();
+        ArrayList<File> listFile = new ArrayList<File>();
+        if (files != null) {
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isFile()) {
+                    listFile.add(files[i]);
+                }
+                if (files[i].isDirectory()) {
+                    listFile.addAll(getFilesArray(files[i].toString()));
+                }
+            }
+        }
+        return listFile;
+    }
+
+    /**
+     * 打开图片
+     * @param mContext
+     * @param imagePath
+     */
+    public static void openImage(Context mContext, String imagePath) {
+        Intent intent = new Intent("android.intent.action.VIEW");
+        intent.addCategory("android.intent.category.DEFAULT");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        Uri uri = Uri.fromFile(new File(imagePath));
+        intent.setDataAndType(uri, "image/*");
+        mContext.startActivity(intent);
+    }
+
+    /**
+     * 打开视频
+     * @param mContext
+     * @param videoPath
+     */
+    public static void openVideo(Context mContext, String videoPath) {
+        Intent intent = new Intent("android.intent.action.VIEW");
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("oneshot", 0);
+        intent.putExtra("configchange", 0);
+        Uri uri = Uri.fromFile(new File(videoPath));
+        intent.setDataAndType(uri, "video/*");
+        mContext.startActivity(intent);
+    }
+
+    /**
+     * 打开URL
+     * @param mContext
+     * @param url
+     */
+    public static void openURL(Context mContext, String url) {
+        Uri uri = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        mContext.startActivity(intent);
+    }
+
+    /**
+     * 下载文件
+     * @param context
+     * @param fileurl
+     */
+    public static void downloadFile(Context context, String fileurl) {
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(fileurl));
+        request.setDestinationInExternalPublicDir("/Download/", fileurl.substring(fileurl.lastIndexOf("/") + 1));
+        DownloadManager downloadManager = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        downloadManager.enqueue(request);
+    }
+
+    /**
+     * 通过APKURL升级应用
+     * @param context
+     * @param fileurl
+     */
+    public static void upgradeApp(Context context, String fileurl) {
+        Intent intent = new Intent(context, DownloadService.class);
+        intent.putExtra("fileurl", fileurl);
+        context.startService(intent);
+    }
+
 
 }
