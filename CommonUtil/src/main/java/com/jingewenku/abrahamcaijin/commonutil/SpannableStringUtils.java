@@ -15,7 +15,7 @@ import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.style.*;
 import android.util.Log;
-import com.jingewenku.abrahamcaijin.commonutil.application.Utils;
+import com.jingewenku.abrahamcaijin.commonutil.application.AppUtils;
 
 import java.io.InputStream;
 import java.lang.annotation.Retention;
@@ -688,7 +688,7 @@ public class SpannableStringUtils {
             }
             if (imageIsBitmap || imageIsDrawable || imageIsUri || imageIsResourceId) {
                 if (imageIsBitmap) {
-                    mBuilder.setSpan(new CustomImageSpan(Utils.getContext(), bitmap, align), start, end, flag);
+                    mBuilder.setSpan(new CustomImageSpan(AppUtils.getContext(), bitmap, align), start, end, flag);
                     bitmap = null;
                     imageIsBitmap = false;
                 } else if (imageIsDrawable) {
@@ -696,11 +696,11 @@ public class SpannableStringUtils {
                     drawable = null;
                     imageIsDrawable = false;
                 } else if (imageIsUri) {
-                    mBuilder.setSpan(new CustomImageSpan(Utils.getContext(), uri, align), start, end, flag);
+                    mBuilder.setSpan(new CustomImageSpan(AppUtils.getContext(), uri, align), start, end, flag);
                     uri = null;
                     imageIsUri = false;
                 } else {
-                    mBuilder.setSpan(new CustomImageSpan(Utils.getContext(), resourceId, align), start, end, flag);
+                    mBuilder.setSpan(new CustomImageSpan(AppUtils.getContext(), resourceId, align), start, end, flag);
                     resourceId = 0;
                     imageIsResourceId = false;
                 }
