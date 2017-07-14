@@ -14,11 +14,11 @@ import android.content.Context;
  * @version: 1.0.0
  */
 
-public class Utils {
+public class AppUtils {
     @SuppressLint("StaticFieldLeak")
     private static Context context;
 
-    private Utils() {
+    private AppUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
 
@@ -28,7 +28,7 @@ public class Utils {
      * @param context 上下文
      */
     public static void init(Context context) {
-        Utils.context = context.getApplicationContext();
+        AppUtils.context = context.getApplicationContext();
     }
 
     /**
