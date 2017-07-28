@@ -6,7 +6,7 @@
 
  * @Title: ACache.java
 
- * @Prject: Utils
+ * @Prject: AppUtils
 
  * @Package: com.example.utils
 
@@ -52,6 +52,14 @@ import java.util.concurrent.atomic.AtomicLong;
  * @version: 1.0.0
  */
 public class AppACache {
+
+    // 用法例子
+    // ACache mCache = ACache.get(this); // 初始化，一般放在基类里
+    // mCache.put("test_key1","test value");
+    // mCache.put("test_key2", "test value", 10);// 保存10秒，如果超过10秒去获取这个key，将为null
+    // mCache.put("test_key3", "test value", 2 ACache.TIME_DAY);// 保存两天，如果超过两天去获取这个key，将为null
+    // String value = mCache.getAsString("test_key1");// 获取数据
+
     public static final int TIME_HOUR = 60 * 60;
     public static final int TIME_DAY = TIME_HOUR * 24;
     private static final int MAX_SIZE = 1000 * 1000 * 50; // 50 mb
@@ -96,6 +104,30 @@ public class AppACache {
                     + cacheDir.getAbsolutePath());
         }
         mCache = new ACacheManager(cacheDir, max_size, max_count);
+    }
+
+    /**
+     * Provides a means to save a cached file before the data are available.
+     * Since writing about the file is complete, and its close method is called,
+     * its contents will be registered in the cache. Example of use:
+     *
+     * ACache cache = new ACache(this) try { OutputStream stream =
+     * cache.put("myFileName") stream.write("some bytes".getBytes()); // now
+     * update cache! stream.close(); } catch(FileNotFoundException e){
+     * e.printStackTrace() }
+     */
+    class xFileOutputStream extends FileOutputStream {
+        File file;
+
+        public xFileOutputStream(File file) throws FileNotFoundException {
+            super(file);
+            this.file = file;
+        }
+
+        public void close() throws IOException {
+            super.close();
+            mCache.put(file);
+        }
     }
 
     // =======================================
@@ -307,6 +339,34 @@ public class AppACache {
             }
             mCache.put(file);
         }
+    }
+
+    /**
+     * Cache for a stream
+     *
+     * @param key
+     *            the file name.
+     * @return OutputStream stream for writing data.
+     * @throws FileNotFoundException
+     *             if the file can not be created.
+     */
+    public OutputStream put(String key) throws FileNotFoundException {
+        return new xFileOutputStream(mCache.newFile(key));
+    }
+
+    /**
+     *
+     * @param key
+     *            the file name.
+     * @return (InputStream or null) stream previously saved in cache.
+     * @throws FileNotFoundException
+     *             if the file can not be opened
+     */
+    public InputStream get(String key) throws FileNotFoundException {
+        File file = mCache.get(key);
+        if (!file.exists())
+            return null;
+        return new FileInputStream(file);
     }
 
     /**
