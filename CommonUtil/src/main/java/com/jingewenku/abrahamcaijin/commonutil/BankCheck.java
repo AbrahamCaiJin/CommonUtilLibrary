@@ -1,6 +1,7 @@
 package com.jingewenku.abrahamcaijin.commonutil;
 
-import com.socks.library.KLog;
+
+import com.jingewenku.abrahamcaijin.commonutil.klog.KLog;
 
 /**
  * @Description:主要功能:银行卡管理
