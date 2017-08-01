@@ -17,6 +17,8 @@ import android.util.Log;
 import java.io.*;
 import java.lang.reflect.Method;
 import java.security.MessageDigest;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -612,5 +614,22 @@ public class AppApplicationMgr {
 //        }
 //      return params;
 //  }
-    
+
+    /**
+     * 获得包名
+     *
+     * @param context 上下文
+     * @return 包名
+     */
+    public static String getPackageName(Context context) {
+        try {
+            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).packageName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
 }
