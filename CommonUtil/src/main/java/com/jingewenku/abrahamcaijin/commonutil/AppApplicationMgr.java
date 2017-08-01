@@ -630,6 +630,22 @@ public class AppApplicationMgr {
         return null;
     }
 
+    /**
+     * 获取application层级的metadata
+     *
+     * @param context 上下文
+     * @param key     key
+     * @return value
+     */
+    public static String getApplicationMetaData(Context context, String key) {
+        try {
+            Bundle metaData = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA).metaData;
+            return metaData.get(key).toString();
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 
 }
