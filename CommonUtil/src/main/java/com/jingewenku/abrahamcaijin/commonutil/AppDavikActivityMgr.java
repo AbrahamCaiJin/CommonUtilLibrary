@@ -31,7 +31,11 @@ public class AppDavikActivityMgr {
      */
     public static AppDavikActivityMgr getScreenManager() {
         if (instance == null) {
-            instance = new AppDavikActivityMgr();
+            synchronized (AppDavikActivityMgr.class){
+                if (instance == null) {
+                    instance = new AppDavikActivityMgr();
+                }
+            }
         }
         return instance;
     }
