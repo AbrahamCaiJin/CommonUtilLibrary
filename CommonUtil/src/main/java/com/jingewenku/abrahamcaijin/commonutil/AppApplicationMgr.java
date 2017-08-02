@@ -647,5 +647,21 @@ public class AppApplicationMgr {
         return null;
     }
 
+    /**
+     * 获得应用申明的所有权限列表
+     * @param context 上下文
+     * @return 获得应用申明的所有权限列表
+     */
+    public static List<String> getPermissions(Context context){
+        List<String> permissions=new ArrayList<String>();
+        try {
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_PERMISSIONS);
+            permissions.addAll(Arrays.asList(packageInfo.requestedPermissions));
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return permissions;
+    }
 
 }
