@@ -1036,6 +1036,92 @@ public class AppDateMgr {
         return df.format(number);
     }
 
+    /**
+     * 获得指定Date类型的毫秒数
+     * @param date 指定的Date
+     * @return 指定Date类型的毫秒数
+     */
+    public static long getTimeMillis(Date date){
+        return date.getTime();
+    }
+
+    /**
+     * 获得当前时间的毫秒数
+     * @return 当前时间的毫秒数
+     */
+    public static long getCurrentDayTimeMillis(){
+        return System.currentTimeMillis();
+    }
+
+    /**
+     * 将格式化过的时间串转换成毫秒
+     * @param day 将格式化过的时间
+     * @param format 格式化字符串
+     * @return 毫秒
+     */
+    public static long convertMillisecond(String day, String format) {
+        if (day == null || format == null)
+            return 0;
+        SimpleDateFormat formatter = new SimpleDateFormat(format);
+        try {
+            Date dt = formatter.parse(day);
+            return dt.getTime();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    /**
+     * 得到两个日期的天数
+     * @param sdate1 日期一
+     * @param sdate2 日期二
+     * @return 天数
+     */
+    public static int getDateInterval(String sdate1, String sdate2) {
+        Date date1 = null;
+        Date date2 = null;
+        long betweenDays=0;
+
+        try {
+            date1 = new SimpleDateFormat("yyyy-MM-dd").parse(sdate1);
+            date2 = new SimpleDateFormat("yyyy-MM-dd").parse(sdate2);
+
+            long beginTime = date1.getTime();
+            long endTime = date2.getTime();
+            betweenDays = (long) ((endTime - beginTime) / (1000 * 60 * 60 * 24));
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return (int) betweenDays;
+    }
+
+    /**
+     * 时间比较
+     * @param format 格式化字符串
+     * @param time1 时间1
+     * @param time2 时间2
+     * @return time1比time2早返回-1,time1与time2相同返回0,time1比time2晚返回1
+     */
+    public static int compareTime(String format, String time1, String time2) {
+        if (format == null || time1 == null || time2 == null)
+            return 0;
+        SimpleDateFormat formatter = new SimpleDateFormat(format);
+        Calendar c1 = Calendar.getInstance();
+        Calendar c2 = Calendar.getInstance();
+
+        try {
+            c1.setTime(formatter.parse(time1));
+            c2.setTime(formatter.parse(time2));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return c1.compareTo(c2);
+    }
+
 //    /**
 //     * 身份证号转生日
 //     *
@@ -1074,6 +1160,8 @@ public class AppDateMgr {
 //            return null;
 //        }
 //    }
+
+
 
 
 }
