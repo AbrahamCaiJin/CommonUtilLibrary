@@ -1,5 +1,6 @@
 package com.jingewenku.abrahamcaijin.commonutil;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -22,7 +23,7 @@ import java.util.TimerTask;
 
 public class AppKeyBoardMgr {
     /**
-     * 打卡软键盘
+     * 打开软键盘
      *
      * @param mEditText  输入框
      * @param mContext   上下文
@@ -115,4 +116,34 @@ public class AppKeyBoardMgr {
         }
         return bool;
     }
+
+    /**
+     * 隐藏输入法
+     *
+     * @param mAct activity
+     */
+    public static void hideInputMethod(Activity mAct) {
+        try {// hide keybord anyway
+            View v = mAct.getWindow().getCurrentFocus();
+            if (v != null) {
+                InputMethodManager imm = (InputMethodManager) mAct.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+            }
+        } catch (Exception e) {
+        }
+    }
+
+    /**
+     * 显示输入法
+     *
+     * @param mAct activity
+     */
+    public static void showInputMethod(final Activity mAct) {
+        View v = mAct.getCurrentFocus();
+        if (null == v) {
+            return;
+        }
+        ((InputMethodManager) mAct.getSystemService(Activity.INPUT_METHOD_SERVICE)).showSoftInput(v, 0);
+    }
+
 }
