@@ -1023,4 +1023,29 @@ public class AppNetworkMgr {
         return wifiManager.getConnectionInfo();
     }
 
+    /**
+     * 获得Proxy地址
+     *
+     * @param context 上下文
+     * @return Proxy地址
+     */
+    public static String getProxy(Context context) {
+        String proxy = null;
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkinfo = connectivityManager.getActiveNetworkInfo();
+            if (networkinfo != null && networkinfo.isAvailable()) {
+                String stringExtraInfo = networkinfo.getExtraInfo();
+                if (stringExtraInfo != null && ("cmwap".equals(stringExtraInfo) || "uniwap".equals(stringExtraInfo))) {
+                    proxy = "10.0.0.172:80";
+                } else if (stringExtraInfo != null && "ctwap".equals(stringExtraInfo)) {
+                    proxy = "10.0.0.200:80";
+                }
+            }
+        }
+
+        return proxy;
+    }
+
+
 }
