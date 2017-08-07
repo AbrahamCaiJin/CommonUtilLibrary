@@ -11,6 +11,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.StatFs;
@@ -21,7 +22,6 @@ import android.provider.Settings;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.util.Xml;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -895,6 +895,19 @@ public class AppPhoneMgr {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Gps是否打开
+     *
+     * @param context
+     * @return
+     */
+    public static boolean isGpsEnabled(Context context) {
+        LocationManager locationManager = ((LocationManager) context
+            .getSystemService(Context.LOCATION_SERVICE));
+        List<String> accessibleProviders = locationManager.getProviders(true);
+        return accessibleProviders != null && accessibleProviders.size() > 0;
     }
 
 }
