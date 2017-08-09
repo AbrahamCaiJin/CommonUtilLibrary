@@ -845,6 +845,7 @@ public class AppValidationMgr {
 //		return Pattern.matches(regex, postcode);
 //	}
 
+
 	/**
 	 * 判断字符串是否为连续数字 45678901等
 	 *
@@ -869,6 +870,7 @@ public class AppValidationMgr {
 		}
 		return true;
 	}
+
 
 
 	/**
