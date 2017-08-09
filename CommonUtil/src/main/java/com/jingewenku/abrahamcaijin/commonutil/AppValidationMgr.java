@@ -1,13 +1,18 @@
 package com.jingewenku.abrahamcaijin.commonutil;
 
 import android.annotation.SuppressLint;
+import android.text.TextUtils;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Hashtable;
 import java.util.UUID;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
@@ -219,9 +224,20 @@ public class AppValidationMgr {
 	public static boolean isOneCode(String oneCode) {
 		return onecode_pattern.matcher(oneCode).matches();
 	}
-	
-	
 
+
+	/**
+	 * 是否含有特殊符号
+	 *
+	 * @param str 待验证的字符串
+	 * @return 是否含有特殊符号
+	 */
+	public static boolean hasSpecialCharacter(String str) {
+		String regEx = "[`~!@#$%^&*()+=|{}':;',\\[\\].<>?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
+		Pattern p = Pattern.compile(regEx);
+		Matcher m = p.matcher(str);
+		return m.find();
+	}
 
 	
 	/**
@@ -829,7 +845,116 @@ public class AppValidationMgr {
 //		return Pattern.matches(regex, postcode);
 //	}
 
+	/**
+	 * 判断字符串是否为连续数字 45678901等
+	 *
+	 * @param str 待验证的字符串
+	 * @return 是否为连续数字
+	 */
+	public static boolean isContinuousNum(String str) {
+		if (TextUtils.isEmpty(str))
+			return false;
+		if (!isNumber(str))
+			return true;
+		int len = str.length();
+		for (int i = 0; i < len - 1; i++) {
+			char curChar = str.charAt(i);
+			char verifyChar = (char) (curChar + 1);
+			if (curChar == '9')
+				verifyChar = '0';
+			char nextChar = str.charAt(i + 1);
+			if (nextChar != verifyChar) {
+				return false;
+			}
+		}
+		return true;
+	}
 
+
+	/**
+	 * 是否是纯字母
+	 *
+	 * @param str 待验证的字符串
+	 * @return 是否是纯字母
+	 */
+	public static boolean isAlphaBetaString(String str) {
+		if (TextUtils.isEmpty(str)) {
+			return false;
+		}
+
+		Pattern p = Pattern.compile("^[a-zA-Z]+$");// 从开头到结尾必须全部为字母或者数字
+		Matcher m = p.matcher(str);
+
+		return m.find();
+	}
+
+	/**
+	 * 判断字符串是否为连续字母 xyZaBcd等
+	 *
+	 * @param str 待验证的字符串
+	 * @return 是否为连续字母
+	 */
+	public static boolean isContinuousWord(String str) {
+		if (TextUtils.isEmpty(str))
+			return false;
+		if (!isAlphaBetaString(str))
+			return true;
+		int len = str.length();
+		String local = str.toLowerCase();
+		for (int i = 0; i < len - 1; i++) {
+			char curChar = local.charAt(i);
+			char verifyChar = (char) (curChar + 1);
+			if (curChar == 'z')
+				verifyChar = 'a';
+			char nextChar = local.charAt(i + 1);
+			if (nextChar != verifyChar) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * 是否是日期
+	 * 20120506 共八位，前四位-年，中间两位-月，最后两位-日
+	 *
+	 * @param date    待验证的字符串
+	 * @param yearlen yearlength
+	 * @return 是否是真实的日期
+	 */
+	public static boolean isRealDate(String date, int yearlen) {
+		int len = 4 + yearlen;
+		if (date == null || date.length() != len)
+			return false;
+
+		if (!date.matches("[0-9]+"))
+			return false;
+
+		int year = Integer.parseInt(date.substring(0, yearlen));
+		int month = Integer.parseInt(date.substring(yearlen, yearlen + 2));
+		int day = Integer.parseInt(date.substring(yearlen + 2, yearlen + 4));
+
+		if (year <= 0)
+			return false;
+		if (month <= 0 || month > 12)
+			return false;
+		if (day <= 0 || day > 31)
+			return false;
+
+		switch (month) {
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				return day > 30 ? false : true;
+			case 2:
+				if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+					return day > 29 ? false : true;
+				return day > 28 ? false : true;
+			default:
+				return true;
+		}
+	}
 
 }
 	
