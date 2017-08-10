@@ -872,7 +872,6 @@ public class AppValidationMgr {
 	}
 
 
-
 	/**
 	 * 是否是纯字母
 	 *
