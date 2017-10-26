@@ -2,8 +2,12 @@
 
           package = "com.jingewenku.abrahamcaijin.commonutil">
 
-	<application android:allowBackup = "true" android:label = "@string/app_name" android:supportsRtl = "true">
-		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<application
+			android:allowBackup = "true"
+			android:label = "@string/app_name"
+			android:supportsRtl = "true">
+
 	</application>
 
 </manifest>
