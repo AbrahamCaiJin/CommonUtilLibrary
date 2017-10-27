@@ -38,8 +38,8 @@ public class WebViewManager {
      * 禁用自适应功能
      */
     public WebViewManager disableAdaptive(){
-        webSettings.setUseWideViewPort(true);
-        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(false);
+        webSettings.setLoadWithOverviewMode(false);
         return this;
     }
 
