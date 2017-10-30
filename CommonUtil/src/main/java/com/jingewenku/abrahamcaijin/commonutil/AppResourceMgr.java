@@ -8,6 +8,8 @@ import android.graphics.drawable.Drawable;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 
 
 /**
@@ -295,6 +297,55 @@ public class AppResourceMgr {
 	 */
 	public static Drawable getDrawable(Context context,int drawableId){
 		return context.getResources().getDrawable(drawableId);
+	}
+
+	/**
+	 * 解压assets的zip压缩文件到指定目录
+	 *
+	 * @param context 上下文对象
+	 * @param assetName 压缩文件名
+	 * @param outputDirectory 输出目录
+	 * @param isReWrite 是否覆盖
+	 * @throws IOException
+	 */
+	public static void unZip(Context context, String assetName, String outputDirectory, boolean isReWrite)
+		throws IOException {
+		File file = new File(outputDirectory);
+		if (!file.exists()) {
+			file.mkdirs();
+		}
+		// 打开压缩文件
+		InputStream inputStream = context.getAssets().open(assetName);
+		ZipInputStream zipInputStream = new ZipInputStream(inputStream);
+		// 读取一个进入点
+		ZipEntry zipEntry = zipInputStream.getNextEntry();
+		byte[] buffer = new byte[1024 * 1024];
+		int count = 0;
+		while (zipEntry != null) {
+			// 如果是一个目录
+			if (zipEntry.isDirectory()) {
+				file = new File(outputDirectory + File.separator + zipEntry.getName());
+				// 文件需要覆盖或者是文件不存在
+				if (isReWrite || !file.exists()) {
+					file.mkdir();
+				}
+			} else {
+				// 如果是文件
+				file = new File(outputDirectory + File.separator + zipEntry.getName());
+				// 文件需要覆盖或者文件不存在，则解压文件
+				if (isReWrite || !file.exists()) {
+					file.createNewFile();
+					FileOutputStream fileOutputStream = new FileOutputStream(file);
+					while ((count = zipInputStream.read(buffer)) > 0) {
+						fileOutputStream.write(buffer, 0, count);
+					}
+					fileOutputStream.close();
+				}
+			}
+			// 定位到下一个文件入口
+			zipEntry = zipInputStream.getNextEntry();
+		}
+		zipInputStream.close();
 	}
 
 }
