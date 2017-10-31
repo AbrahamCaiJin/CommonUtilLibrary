@@ -34,6 +34,7 @@ public class AppLogMessageMgr {
             Log.i(tag, msg != null ? msg : "");
         }
     }
+
     public static void i(Object object,String msg){
         if(isDebug){
             Log.i(object.getClass().getSimpleName(), msg != null ? msg : "");
