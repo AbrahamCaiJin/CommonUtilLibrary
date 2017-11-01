@@ -13,11 +13,10 @@ package com.jingewenku.abrahamcaijin.commonutil.klog;
 
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-
-import com.socks.library.klog.BaseLog;
-import com.socks.library.klog.FileLog;
-import com.socks.library.klog.JsonLog;
-import com.socks.library.klog.XmlLog;
+import com.jingewenku.abrahamcaijin.commonutil.klog.base.BaseLog;
+import com.jingewenku.abrahamcaijin.commonutil.klog.base.FileLog;
+import com.jingewenku.abrahamcaijin.commonutil.klog.base.JsonLog;
+import com.jingewenku.abrahamcaijin.commonutil.klog.base.XmlLog;
 
 import java.io.File;
 import java.io.PrintWriter;
