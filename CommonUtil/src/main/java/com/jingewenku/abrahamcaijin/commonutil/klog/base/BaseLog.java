@@ -12,8 +12,8 @@ package com.jingewenku.abrahamcaijin.commonutil.klog.base;
  */
 
 import android.util.Log;
+import com.jingewenku.abrahamcaijin.commonutil.klog.KLog;
 
-import com.socks.library.KLog;
 
 /**
  * Created by zhaokaiqiang on 15/11/18.
