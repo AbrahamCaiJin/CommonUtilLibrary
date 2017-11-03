@@ -12,8 +12,8 @@ package com.jingewenku.abrahamcaijin.commonutil.klog.base;
  */
 
 import android.util.Log;
+import com.jingewenku.abrahamcaijin.commonutil.klog.KLog;
 import com.jingewenku.abrahamcaijin.commonutil.klog.KLogUtil;
-import com.socks.library.KLog;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
