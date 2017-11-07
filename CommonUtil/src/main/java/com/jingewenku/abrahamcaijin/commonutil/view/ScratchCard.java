@@ -8,7 +8,7 @@ import android.view.View;
 import com.jingewenku.abrahamcaijin.commonutil.R;
 
 /**
- * @Description:主要功能:
+ * @Description:主要功能:自定义刮刮乐
  * @Prject: CommonUtilLibrary
  * @Package: com.jingewenku.abrahamcaijin.commonutil.view
  * @author: AbrahamCaiJin
