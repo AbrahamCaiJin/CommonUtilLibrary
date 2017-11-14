@@ -24,7 +24,7 @@ import java.util.Date;
  * @version: 1.0.0
  */
 
-public class RSAUtil {
+public class RSAUtils {
     private static final String ALGORITHOM = "RSA";
     // 算法名称
     private static final int KEY_SIZE = 1024;
