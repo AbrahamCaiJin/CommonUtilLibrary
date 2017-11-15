@@ -162,6 +162,7 @@ public class CipherUtils {
         }
         return null;
     }
+
     private static String byte2Hex(byte[] b) {
         StringBuilder sb = new StringBuilder();
         for (byte aB : b) {
