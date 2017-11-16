@@ -70,7 +70,6 @@ public class AppApplicationMgr {
         return verName;
     }
 
-    
     /**
      * 获取本地Apk版本号
      * @param context 上下文
