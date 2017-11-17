@@ -36,7 +36,6 @@ import java.util.regex.Pattern;
 @SuppressWarnings("rawtypes")
 public class AppApplicationMgr {
 
-
     /**
      * 获取本地apk的名称
      * @param context 上下文
