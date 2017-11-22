@@ -46,7 +46,7 @@ import java.util.Map;
  * @version: 1.0.0
  */
 
-public class x {
+public class AppPhoneMgr {
     private static AppPhoneMgr phoneUtil;
 
     public static AppPhoneMgr getInstance() {
@@ -753,6 +753,7 @@ public class x {
 
         return result;
     }
+
 
 
     /**
