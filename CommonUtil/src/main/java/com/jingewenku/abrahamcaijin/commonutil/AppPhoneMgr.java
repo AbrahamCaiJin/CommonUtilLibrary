@@ -773,7 +773,6 @@ public class AppPhoneMgr {
         return tm != null ? tm.getPhoneType() : -1;
     }
 
-
     /**
      * 判断sim卡是否准备好
      *
