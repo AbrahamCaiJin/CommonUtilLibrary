@@ -754,7 +754,6 @@ public class AppPhoneMgr {
         return result;
     }
 
-
     /**
      * 获取移动终端类型
      *
