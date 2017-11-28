@@ -893,7 +893,6 @@ public class AppNetworkMgr {
             : false;
     }
 
-
     /**
      * 设置Wifi，需要CHANGE_WIFI_STATE权限
      *
