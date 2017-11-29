@@ -30,8 +30,7 @@ public class AppActivitySkipUtil {
      * @param activity 发起跳转的Activity实例
      * @param cls 目标Activity实例
      */
-    public static void skipAnotherActivity(Activity activity,
-        Class<? extends Activity> cls) {
+    public static void skipAnotherActivity(Activity activity, Class<? extends Activity> cls) {
         Intent intent = new Intent(activity, cls);
         activity.startActivity(intent);
         activity.finish();
