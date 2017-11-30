@@ -43,8 +43,7 @@ public class AppActivitySkipUtil {
      * @param cls
      * @param hashMap
      */
-    public static void skipAnotherActivity(Activity activity,
-        Class<? extends Activity> cls,
+    public static void skipAnotherActivity(Activity activity, Class<? extends Activity> cls,
         HashMap<String, ? extends Object> hashMap) {
         Intent intent = new Intent(activity, cls);
         Iterator<?> iterator = hashMap.entrySet().iterator();
