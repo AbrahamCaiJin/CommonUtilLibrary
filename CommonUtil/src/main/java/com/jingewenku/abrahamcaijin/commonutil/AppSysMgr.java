@@ -80,6 +80,15 @@ public class AppSysMgr {
 		return language;
 	}
 
+	/**
+	 * 获取当前系统上的语言列表(Locale列表)
+	 *
+	 * @return  语言列表
+	 */
+	public static Locale[] getSystemLanguageList() {
+		return Locale.getAvailableLocales();
+	}
+
 	
 	/**
 	 * 获取手机型号
