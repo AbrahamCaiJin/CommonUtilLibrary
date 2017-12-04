@@ -1457,4 +1457,25 @@ public class AppImageMgr {
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         return TypedValue.applyDimension(unit, value, metrics);
     }
+
+    /**
+     *
+     * @param path String path = "图片路径";
+     * @return 图片格式
+     */
+    public static String getImageFormat(String path){
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(path, options);
+        String type = options.outMimeType;
+        if (TextUtils.isEmpty(type)) {
+             type = "未能识别的图片";
+        } else {
+             type = type.substring(6, type.length());
+        }
+        AppLogMessageMgr.d("image type -> ", type);
+        return type;
+    }
+
+
 }
