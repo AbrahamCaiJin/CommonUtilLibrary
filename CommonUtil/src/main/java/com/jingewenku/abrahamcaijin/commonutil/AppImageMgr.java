@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.*;
 import android.graphics.Bitmap.CompressFormat;
@@ -1476,6 +1477,27 @@ public class AppImageMgr {
         AppLogMessageMgr.d("image type -> ", type);
         return type;
     }
+
+    /**
+     *
+     * @param res  getResources()
+     * @param id R.drawable/mipmap.xxx
+     * @return 图片格式
+     */
+    public static String getImageFormat(Resources res, int id){
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(res, id, options);
+        String type = options.outMimeType;
+        if (TextUtils.isEmpty(type)) {
+            type = "未能识别的图片";
+        } else {
+            type = type.substring(6, type.length());
+        }
+        AppLogMessageMgr.d("image type -> ", type);
+        return type;
+    }
+
 
 
 }
