@@ -1498,6 +1498,25 @@ public class AppImageMgr {
         return type;
     }
 
-
+    /**
+     *
+     * @param data    byte[]
+     * @param offset  int
+     * @param length  int
+     * @return        图片格式
+     */
+    public static String getImageFormat(byte[] data, int offset, int length){
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeByteArray(data, offset,length);
+        String type = options.outMimeType;
+        if (TextUtils.isEmpty(type)) {
+            type = "未能识别的图片";
+        } else {
+            type = type.substring(6, type.length());
+        }
+        AppLogMessageMgr.d("image type -> ", type);
+        return type;
+    }
 
 }
