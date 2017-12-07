@@ -90,7 +90,12 @@ public class AppToastMgr {
 	 * @param message 显示文本
 	 */
 	public static void Toast(final Context context, final String message) {
-		Toast.makeText(context, message, duration).show();
+		if (toast == null) {
+			toast = Toast.makeText(context, message, duration);
+		} else {
+			toast.setText(message);
+		}
+		toast.show();
 	}
 
 	/**
