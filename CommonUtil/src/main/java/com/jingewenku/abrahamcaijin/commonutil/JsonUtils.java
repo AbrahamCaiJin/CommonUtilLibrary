@@ -9,10 +9,7 @@ import org.json.JSONTokener;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Description:主要功能:Json工具类(需要依赖Gson 2.0以上)
@@ -310,6 +307,21 @@ public class JsonUtils {
             }
         }
         return sb.toString();
+    }
+
+    /**
+     *
+     * @param array String[] array = new String[] {"zhu", "wen", "tao"};
+     * @return  List
+     */
+    public static List<String> array2List(String[] array){
+        // String数组转List集合
+        List<String> mlist = Arrays.asList(array);
+        // 输出List集合
+        for (int i = 0; i < mlist.size(); i++) {
+            AppLogMessageMgr.d("mlist-->" + mlist.get(i));
+        }
+        return mlist;
     }
 
 }
