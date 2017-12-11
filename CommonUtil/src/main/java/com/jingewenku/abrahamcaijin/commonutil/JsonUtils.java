@@ -310,7 +310,7 @@ public class JsonUtils {
     }
 
     /**
-     *
+     *字符数组转List集合
      * @param array String[] array = new String[] {"zhu", "wen", "tao"};
      * @return  List
      */
