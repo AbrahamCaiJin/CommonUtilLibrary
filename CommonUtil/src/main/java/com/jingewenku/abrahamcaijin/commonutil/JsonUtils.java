@@ -319,9 +319,24 @@ public class JsonUtils {
         List<String> mlist = Arrays.asList(array);
         // 输出List集合
         for (int i = 0; i < mlist.size(); i++) {
-            AppLogMessageMgr.d("mlist-->" + mlist.get(i));
+            AppLogMessageMgr.d(JsonUtils.class.getSimpleName() + "---array2List-->" + mlist.get(i));
         }
         return mlist;
+    }
+
+    /**
+     *
+     * @param list ArrayList<String> list = new ArrayList<>();
+     * @return String[]
+     */
+    public static String[] list2Array(List<String> list){
+        String[] array = list.toArray(new String[list.size()]);
+        System.out.println("列表长度为："+list.size());
+        System.out.println("将列表转化为数组：");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]+"  ");
+        }
+        return  array;
     }
 
 }
