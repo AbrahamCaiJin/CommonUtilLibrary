@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.EOFException;
+
 
 /**
  * 主要功能： 自定义Toast提示框
@@ -95,7 +97,7 @@ public class AppToastMgr {
 		} else {
 			toast.setText(message);
 		}
-		toast.show();
+			toast.show();
 	}
 
 	/**
@@ -106,7 +108,7 @@ public class AppToastMgr {
 	 * @param message
 	 */
 	public static void show(Context context, String message) {
-		ToastShortCenter(context,message);
+			ToastShortCenter(context,message);
 	}
 
 	/**
@@ -117,7 +119,12 @@ public class AppToastMgr {
 	 */
 	public static void ToastShortBottomCenter(Context context, String message) {
 		if (context != null) {
-			Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+			if (toast == null) {
+				toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.show();
 		}
 	}
 
@@ -129,10 +136,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastShortBottomLeft(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-			toast.setGravity(Gravity.BOTTOM | Gravity.LEFT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.BOTTOM | Gravity.LEFT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -145,10 +155,13 @@ public class AppToastMgr {
 	public static void ToastShortBottomRight(Context context, String message) {
 
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-			toast.setGravity(Gravity.BOTTOM | Gravity.RIGHT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.BOTTOM | Gravity.RIGHT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -160,10 +173,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastShortCenter(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-			toast.setGravity(Gravity.CENTER, 0, 0);
-			toast.show();
+			if (toast == null){
+			toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.CENTER, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -175,10 +191,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastShortCenterLeft(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-			toast.setGravity(Gravity.CENTER | Gravity.LEFT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.CENTER | Gravity.LEFT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -190,10 +209,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastShortCenterRight(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-			toast.setGravity(Gravity.CENTER | Gravity.RIGHT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.CENTER | Gravity.RIGHT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -205,10 +227,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastShortTopCenter(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-			toast.setGravity(Gravity.TOP, 0, 0);
-			toast.show();
+			if (toast ==null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.TOP, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -220,10 +245,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastShortTopLeft(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-			toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -235,10 +263,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastShortTopRight(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-			toast.setGravity(Gravity.TOP | Gravity.RIGHT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.TOP | Gravity.RIGHT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -250,8 +281,12 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongBottomCenter(Context context, String message) {
 		if (context != null) {
-
-			Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.show();
 		}
 	}
 
@@ -263,10 +298,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongBottomLeft(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.BOTTOM | Gravity.LEFT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.BOTTOM | Gravity.LEFT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -278,10 +316,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongBottomRight(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.BOTTOM | Gravity.RIGHT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.BOTTOM | Gravity.RIGHT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -293,10 +334,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongCenter(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.CENTER, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.CENTER, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -308,10 +352,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongCenterLeft(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.CENTER | Gravity.LEFT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.CENTER | Gravity.LEFT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -323,10 +370,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongCenterRight(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.CENTER | Gravity.RIGHT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.CENTER | Gravity.RIGHT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -338,10 +388,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongTopCenter(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.TOP, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.TOP, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -353,10 +406,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongTopLeft(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+				toast.show();
 		}
 	}
 
@@ -368,10 +424,13 @@ public class AppToastMgr {
 	 */
 	public static void ToastLongTopRight(Context context, String message) {
 		if (context != null) {
-
-			Toast toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
-			toast.setGravity(Gravity.TOP | Gravity.RIGHT, 0, 0);
-			toast.show();
+			if (toast == null){
+				toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+			}else {
+				toast.setText(message);
+			}
+				toast.setGravity(Gravity.TOP | Gravity.RIGHT, 0, 0);
+				toast.show();
 		}
 	}
 
