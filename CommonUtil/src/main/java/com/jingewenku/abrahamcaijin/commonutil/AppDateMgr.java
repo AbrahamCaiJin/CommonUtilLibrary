@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 /**
  * @Description:主要功能:时间日期管理
@@ -36,6 +37,16 @@ public class AppDateMgr {
     private static final String[] ZODIAC = new String[]{"水瓶座", "双鱼座", "白羊座", "金牛座", "双子座", "巨蟹座", "狮子座", "处女座", "天秤座", "天蝎座", "射手座", "魔羯座"};
 
     private static final int[] ZODIAC_FLAGS = new int[]{20, 19, 21, 21, 21, 22, 23, 23, 23, 24, 23, 22};
+
+    /**
+     * 获取北京时区
+     * @return
+     */
+    public static TimeZone getBeijingTimeZone(){
+        return TimeZone.getTimeZone("GMT+8:00");
+    }
+
+
 
     /**
      * 当天的年月日
