@@ -46,6 +46,14 @@ public class AppDateMgr {
         return TimeZone.getTimeZone("GMT+8:00");
     }
 
+    /**
+     * 获取当前手机对应的系统时区
+     *
+     */
+    public static TimeZone getPhoneTimeZone()
+    {
+        return TimeZone.getDefault();
+    }
 
 
     /**
