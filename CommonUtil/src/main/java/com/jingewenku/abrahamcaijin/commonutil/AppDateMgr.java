@@ -95,6 +95,25 @@ public class AppDateMgr {
     }
 
     /**
+     * 获取更改时区后的时间
+     * @param date 时间
+     * @param oldZone 旧时区
+     * @param newZone 新时区
+     * @return 时间
+     */
+    public static Date changeTimeZone(Date date, TimeZone oldZone, TimeZone newZone)
+    {
+        Date dateTmp = null;
+        if (date != null)
+        {
+            int timeOffset = oldZone.getRawOffset() - newZone.getRawOffset();
+            dateTmp = new Date(date.getTime() - timeOffset);
+        }
+        return dateTmp;
+    }
+
+
+    /**
      * 当天的年月日
      * @return
      */
