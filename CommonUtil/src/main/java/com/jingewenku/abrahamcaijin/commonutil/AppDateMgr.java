@@ -112,6 +112,56 @@ public class AppDateMgr {
         return dateTmp;
     }
 
+    /**
+     * 将北京时区的时间转化为当前系统对应时区的时间
+     * @param beijingTime
+     * @param format
+     * @return
+     */
+    public static String beijingTime2PhoneTime(String beijingTime,String format){
+        Date beijingDate = parseToDate(beijingTime, format);
+        Date phoneDate = changeTimeZone(beijingDate, getBeijingTimeZone(), getPhoneTimeZone());
+        String phoneTime= formatDateToStr(phoneDate,format);
+        return phoneTime;
+    }
+
+    /**
+     * 将日期字符串转换为Date对象
+     * @param date 日期字符串，必须为"yyyy-MM-dd HH:mm:ss"
+     * @param format 格式化字符串
+     * @return 日期字符串的Date对象表达形式
+     * */
+    public static Date parseToDate(String date, String format)
+    {
+        Date dt = null;
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
+        try
+        {
+            dt = dateFormat.parse(date);
+        }
+        catch(ParseException e)
+        {
+            e.printStackTrace();
+        }
+
+        return dt;
+    }
+
+    /**
+     * 将date----->String
+     * 将Date对象转换为指定格式的字符串
+     * @param date Date对象
+     * @param //String format 格式化字符串
+     * @return Date对象的字符串表达形式
+     * */
+    public static String formatDateToStr(Date date, String format)
+    {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(format);
+        return dateFormat.format(date);
+    }
+
+
+
 
     /**
      * 当天的年月日
