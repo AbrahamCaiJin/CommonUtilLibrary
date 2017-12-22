@@ -160,6 +160,20 @@ public class AppDateMgr {
         return dateFormat.format(date);
     }
 
+    /** 格式化日期的标准字符串 */
+    public final static String Detail_Format = "yyyy-MM-dd HH:mm:ss";
+
+    /**
+     * 将本地系统对应时区的时间转换为上北京时区对应的时间
+     * @param phoneTime
+     * @return
+     */
+    public static String phoneTime2BeijingTime(String phoneTime){
+        Date phoneDate = parseToDate(phoneTime, Detail_Format);
+        Date beijingDate = changeTimeZone(phoneDate,getPhoneTimeZone(), getBeijingTimeZone());
+        String beijingTime= formatDateToStr(beijingDate,Detail_Format);
+        return beijingTime;
+    }
 
 
 
