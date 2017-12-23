@@ -1262,7 +1262,18 @@ public class AppDateMgr {
         return c1.compareTo(c2);
     }
 
-//    /**
+    /**
+     * 获得下午或上午
+     *
+     * @param date
+     * @return
+     */
+    public static String am_or_pm(Date date) {
+        return String.format("%tp", date);
+    }
+
+
+    //    /**
 //     * 身份证号转生日
 //     *
 //     * @param identityCard 身份证
