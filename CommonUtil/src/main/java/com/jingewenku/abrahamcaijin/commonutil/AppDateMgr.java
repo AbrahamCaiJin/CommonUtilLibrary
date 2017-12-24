@@ -1272,6 +1272,15 @@ public class AppDateMgr {
         return String.format("%tp", date);
     }
 
+    /**
+     * 获得当前微妙数 9位
+     *
+     * @param date
+     * @return
+     */
+    public static String subtle(Date date) {
+        return String.format("%tN", date);
+    }
 
     //    /**
 //     * 身份证号转生日
