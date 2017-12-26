@@ -1282,6 +1282,16 @@ public class AppDateMgr {
         return String.format("%tN", date);
     }
 
+    /**
+     * 获得当前毫秒数 3位
+     *
+     * @param date
+     * @return
+     */
+    public static String mill(Date date) {
+        return String.format("%tL", date);
+    }
+
     //    /**
 //     * 身份证号转生日
 //     *
