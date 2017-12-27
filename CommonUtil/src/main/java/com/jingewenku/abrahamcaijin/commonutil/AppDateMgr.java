@@ -1292,6 +1292,16 @@ public class AppDateMgr {
         return String.format("%tL", date);
     }
 
+    /**
+     * 获得当前秒 2位
+     *
+     * @param date
+     * @return
+     */
+    public static String second(Date date) {
+        return String.format("%tS", date);
+    }
+
     //    /**
 //     * 身份证号转生日
 //     *
