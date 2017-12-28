@@ -1302,6 +1302,16 @@ public class AppDateMgr {
         return String.format("%tS", date);
     }
 
+    /**
+     * 获得当前分钟 2为
+     *
+     * @param date
+     * @return
+     */
+    public static String minute(Date date) {
+        return String.format("%tM", date);
+    }
+
     //    /**
 //     * 身份证号转生日
 //     *
