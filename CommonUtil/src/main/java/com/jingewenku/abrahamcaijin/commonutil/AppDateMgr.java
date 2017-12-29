@@ -1263,6 +1263,16 @@ public class AppDateMgr {
     }
 
     /**
+     * 获得时区偏移量 相对GMT RFC 82
+     *
+     * @param date
+     * @return
+     */
+    public static String time_offset(Date date) {
+        return String.format("%tz", date);
+    }
+
+    /**
      * 获得下午或上午
      *
      * @param date
@@ -1303,7 +1313,7 @@ public class AppDateMgr {
     }
 
     /**
-     * 获得当前分钟 2为
+     * 获得当前分钟 2位
      *
      * @param date
      * @return
