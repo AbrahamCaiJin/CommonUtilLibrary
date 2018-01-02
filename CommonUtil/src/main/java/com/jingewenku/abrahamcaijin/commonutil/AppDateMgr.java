@@ -1322,6 +1322,18 @@ public class AppDateMgr {
         return String.format("%tM", date);
     }
 
+    /**
+     * 获得当前小时 1-12
+     *
+     * @param date
+     * @return
+     */
+    public static String hour_l(Date date) {
+        return String.format("%tl", date);
+    }
+
+
+
     //    /**
 //     * 身份证号转生日
 //     *
