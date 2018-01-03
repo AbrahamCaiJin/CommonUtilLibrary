@@ -1332,6 +1332,15 @@ public class AppDateMgr {
         return String.format("%tl", date);
     }
 
+    /**
+     * 获得当前小时 00-23
+     *
+     * @param date
+     * @return
+     */
+    public static String hour_H(Date date) {
+        return String.format("%tH", date);
+    }
 
 
     //    /**
