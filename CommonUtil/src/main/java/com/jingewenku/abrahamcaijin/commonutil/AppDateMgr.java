@@ -1342,6 +1342,18 @@ public class AppDateMgr {
         return String.format("%tH", date);
     }
 
+    /**
+     * 获得当前时间 15:25
+     *
+     * @param date
+     * @return
+     */
+    public static String hour_minute(Date date) {
+        return String.format("%tR", date);
+    }
+
+
+
 
     //    /**
 //     * 身份证号转生日
