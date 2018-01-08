@@ -25,7 +25,7 @@ import java.util.List;
 
 /**
  * 主要功能:App网络管理
- *
+ * 凡是涉及到WifiManager的获取，都要使用application的上下文，否则会内存泄漏，具体见源码
  * @Prject: CommonUtilLibrary
  * @Package: com.jingewenku.abrahamcaijin.commonutil
  * @author: AbrahamCaiJin
