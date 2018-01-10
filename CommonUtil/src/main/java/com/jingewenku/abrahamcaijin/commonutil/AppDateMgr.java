@@ -1372,6 +1372,33 @@ public class AppDateMgr {
         return String.format("%tr", date);
     }
 
+    /**
+     * 获取当前时间到日 03/25/08（月/日/年）
+     *
+     * @param date
+     * @return
+     */
+    public static String mdy(Date date) {
+        return String.format("%tD", date);
+    }
+
+    /**
+     * 获取当前时间到日 2008-03-25 年—月—日
+     *
+     * @param date
+     * @return
+     */
+    public static String ymd(Date date) {
+        return String.format("%tF", date);
+    }
+
+
+
+
+
+
+
+
 
 
 
