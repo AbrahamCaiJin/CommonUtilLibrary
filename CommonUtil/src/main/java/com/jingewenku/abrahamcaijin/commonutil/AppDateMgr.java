@@ -1392,7 +1392,15 @@ public class AppDateMgr {
         return String.format("%tF", date);
     }
 
-
+    /**
+     * 获得日期天 1-31
+     *
+     * @param date
+     * @return
+     */
+    public static String day_one(Date date) {
+        return String.format("%te", date);
+    }
 
 
 
