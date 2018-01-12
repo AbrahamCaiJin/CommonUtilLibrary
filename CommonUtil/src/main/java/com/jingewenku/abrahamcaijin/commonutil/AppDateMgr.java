@@ -1402,7 +1402,15 @@ public class AppDateMgr {
         return String.format("%te", date);
     }
 
-
+    /**
+     * 获得日期天 01-31
+     *
+     * @param date
+     * @return
+     */
+    public static String day_two(Date date) {
+        return String.format("%td", date);
+    }
 
 
 
