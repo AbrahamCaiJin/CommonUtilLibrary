@@ -1412,6 +1412,15 @@ public class AppDateMgr {
         return String.format("%td", date);
     }
 
+    /**
+     * 一年中的第几天 085
+     *
+     * @param date
+     * @return
+     */
+    public static String day_to_year(Date date) {
+        return String.format("%tj", date);
+    }
 
 
 
