@@ -1422,6 +1422,12 @@ public class AppDateMgr {
         return String.format("%tj", date);
     }
 
+    /**
+     * 获得月份简称
+     */
+    public static String month_referred(Date date) {
+        return String.format("%tb", date);
+    }
 
 
 
