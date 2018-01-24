@@ -1429,6 +1429,15 @@ public class AppDateMgr {
         return String.format("%tb", date);
     }
 
+    /**
+     * 获得月份全称
+     *
+     * @param date
+     * @return
+     */
+    public static String month_full_name(Date date) {
+        return String.format("%tB", date);
+    }
 
 
 
