@@ -1439,6 +1439,15 @@ public class AppDateMgr {
         return String.format("%tB", date);
     }
 
+    /**
+     * 获得月份 01-12
+     *
+     * @param date
+     * @return
+     */
+    public static String month(Date date) {
+        return String.format("%tm", date);
+    }
 
 
 
