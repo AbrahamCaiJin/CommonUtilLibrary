@@ -1449,6 +1449,16 @@ public class AppDateMgr {
         return String.format("%tm", date);
     }
 
+    /**
+     *获得星期简称
+     *
+     * @param date
+     * @return
+     */
+    public static String week_referred(Date date) {
+        return String.format("%ta", date);
+    }
+
 
 
 
