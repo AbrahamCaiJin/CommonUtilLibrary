@@ -1459,6 +1459,15 @@ public class AppDateMgr {
         return String.format("%ta", date);
     }
 
+    /**
+     * 获得星期全称
+     *
+     * @param date
+     * @return
+     */
+    public static String week_full_name(Date date) {
+        return String.format("%tA", date);
+    }
 
 
 
