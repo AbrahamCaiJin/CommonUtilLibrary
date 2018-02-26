@@ -1469,6 +1469,16 @@ public class AppDateMgr {
         return String.format("%tA", date);
     }
 
+    /**
+     * 获得年简称 16
+     *
+     * @param date
+     * @return
+     */
+    public static String year_referred(Date date) {
+        return String.format("%ty", date);
+    }
+
 
 
     //    /**
