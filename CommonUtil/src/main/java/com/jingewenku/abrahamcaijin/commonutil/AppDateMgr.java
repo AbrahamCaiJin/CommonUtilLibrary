@@ -1479,6 +1479,16 @@ public class AppDateMgr {
         return String.format("%ty", date);
     }
 
+    /**
+     * 获得年全称 2016
+     *
+     * @param date
+     * @return
+     */
+    public static String year_full_name(Date date) {
+        return String.format("%tY", date);
+    }
+
 
 
     //    /**
