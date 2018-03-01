@@ -1489,6 +1489,25 @@ public class AppDateMgr {
         return String.format("%tY", date);
     }
 
+    /**
+     * 星期二 三月 25 13:37:22 CST 2016
+     *
+     * @param date
+     * @return
+     */
+    public static String time(Date date) {
+        return String.format("%tc", date);
+    }
+
+    /**
+     * 获取时间戳到秒
+     *
+     * @param date
+     * @return
+     */
+    public static String time_to_second(Date date) {
+        return String.format("%ts", date);
+    }
 
 
     //    /**
