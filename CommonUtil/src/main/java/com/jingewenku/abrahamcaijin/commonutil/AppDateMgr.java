@@ -1519,6 +1519,18 @@ public class AppDateMgr {
         return String.format("%tQ", date);
     }
 
+    /**
+     * 获取时间戳到毫秒
+     *
+     * @return
+     */
+    public static long time_to_mill() {
+        return System.currentTimeMillis();
+    }
+
+
+
+
 
     //    /**
 //     * 身份证号转生日
