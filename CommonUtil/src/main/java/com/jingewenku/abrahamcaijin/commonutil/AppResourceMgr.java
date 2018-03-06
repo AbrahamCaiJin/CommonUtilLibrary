@@ -252,6 +252,34 @@ public class AppResourceMgr {
 	}
 
 	/**
+	 * get an asset using ACCESS_STREAMING mode. This provides access to files that have been bundled with an
+	 * application as assets -- that is, files placed in to the "assets" directory.
+	 *
+	 * @param context
+	 * @param fileName The name of the asset to open. This name can be hierarchical.
+	 * @return
+	 */
+	public static String geFileFromAssets(Context context, String fileName) {
+		if (context == null || AppStringUtils.isEmpty(fileName)) {
+			return null;
+		}
+
+		StringBuilder s = new StringBuilder("");
+		try {
+			InputStreamReader in = new InputStreamReader(context.getResources().getAssets().open(fileName));
+			BufferedReader br = new BufferedReader(in);
+			String line;
+			while ((line = br.readLine()) != null) {
+				s.append(line);
+			}
+			return s.toString();
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	/**
 	 * 从raw目录读取文本
 	 *
 	 * @param context 上下文
