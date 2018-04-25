@@ -844,7 +844,7 @@
 
 Gradle:
 ``` groovy
-compile 'com.abrahamcaijin.commonutil:CommonUtil:1.0.1'
+compile 'com.abrahamcaijin.commonutil:CommonUtil:1.0.2'
 
 ```
 Maven:
@@ -852,21 +852,25 @@ Maven:
 <dependency>
   <groupId>com.abrahamcaijin.commonutil</groupId>
   <artifactId>CommonUtil</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
 </dependency>
 ```
  Ivy:
 ``` groovy
-<dependency org='com.abrahamcaijin.commonutil' name='CommonUtil' rev='1.0.1'>
+<dependency org='com.abrahamcaijin.commonutil' name='CommonUtil' rev='1.0.2'>
   <artifact name='CommonUtil' ext='pom' ></artifact>
 </dependency>
 ```
 ## How to use
 
 ```
+这里说明一下，发布1.0.2的时候手抖，把初始化改成了Utils，除了1.0.2，其他的版本号都是AppUtils
 // init it in the function of onCreate in ur Application
+1.0.1  1.0.3...
 AppUtils.init(context);
+1.0.2
+Utils.init(context);
 ```
 ## Proguard
 
