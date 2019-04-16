@@ -871,6 +871,7 @@ Maven:
 AppUtils.init(context);
 1.0.2
 Utils.init(context);
+注：有些方法可能只更新到了GitHub上，还更到jcenter上面，所以最好使用的时候拷贝到自己项目中使用，这样也能减少资源占用
 ```
 ## Proguard
 
