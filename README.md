@@ -5,6 +5,31 @@
 [![TeamCity (simple build status)](https://img.shields.io/badge/Weibo-Abraham%20-lightgrey.svg)](http://weibo.com/p/1005053895373916/home?from=page_100505&mod=TAB&is_all=1#place)
 [![Travis](https://img.shields.io/badge/QQ群-523167548%20-ff69b4.svg)](https://shang.qq.com/wpa/qunwpa?idkey=4898a63b0283bc98cc61daeeb9eb6648a34886cf554a3ec272063ef5d999b012)</br>
 
+如果您觉得本项目不错的话，来个star支持下作者吧！
+
+快速开发工具类收集，史上最全的开发工具类 [CommonUtilLibrary](https://github.com/AbrahamCaiJin/CommonUtilLibrary)
+
+[![GitHub stars](https://img.shields.io/github/stars/AbrahamCaiJin/CommonUtilLibrary.svg?style=social&label=Star)](https://github.com/AbrahamCaiJin/CommonUtilLibrary) [![GitHub forks](https://img.shields.io/github/forks/AbrahamCaiJin/CommonUtilLibrary.svg?style=social&label=Fork)](https://github.com/AbrahamCaiJinCommonUtilLibrary) [![GitHub watchers](https://img.shields.io/github/watchers/AbrahamCaiJin/CommonUtilLibrary.svg?style=social&label=Watch)](https://github.com/AbrahamCaiJin/CommonUtilLibrary)
+
+常用的自定义view和第三方类库 [CommonUILibrary](https://github.com/AbrahamCaiJin/CommonUILibrary)
+
+[![GitHub stars](https://img.shields.io/github/stars/AbrahamCaiJin/CommonUILibrary.svg?style=social&label=Star)](https://github.com/AbrahamCaiJin/CommonUILibrary) [![GitHub forks](https://img.shields.io/github/forks/AbrahamCaiJin/CommonUILibrary.svg?style=social&label=Fork)](https://github.com/AbrahamCaiJin/CommonUILibrary) [![GitHub watchers](https://img.shields.io/github/watchers/AbrahamCaiJin/CommonUILibrary.svg?style=social&label=Watch)](https://github.com/AbrahamCaiJin/CommonUILibrary)
+
+ViewPager无限滚动循环，支持Fragment和View，可自定义 [LoopViewPager](https://github.com/AbrahamCaiJin/LoopViewPager)
+
+[![GitHub stars](https://img.shields.io/github/stars/AbrahamCaiJin/LoopViewPager.svg?style=social&label=Star)](https://github.com/AbrahamCaiJin/LoopViewPager) [![GitHub forks](https://img.shields.io/github/forks/AbrahamCaiJin/LoopViewPager.svg?style=social&label=Fork)](https://github.com/AbrahamCaiJin/LoopViewPager) [![GitHub watchers](https://img.shields.io/github/watchers/AbrahamCaiJin/LoopViewPager.svg?style=social&label=Watch)](https://github.com/AbrahamCaiJin/LoopViewPager)
+
+底部导航+LinearLayout+Navigation+RecycleView+CardView+个人中心 [BottomAndShapeDemo](https://github.com/AbrahamCaiJin/BottomAndShapeDemo)
+
+[![GitHub stars](https://img.shields.io/github/stars/AbrahamCaiJin/BottomAndShapeDemo.svg?style=social&label=Star)](https://github.com/AbrahamCaiJin/BottomAndShapeDemo) [![GitHub forks](https://img.shields.io/github/forks/AbrahamCaiJin/BottomAndShapeDemo.svg?style=social&label=Fork)](https://github.com/AbrahamCaiJin/BottomAndShapeDemo) [![GitHub watchers](https://img.shields.io/github/watchers/AbrahamCaiJin/BottomAndShapeDemo.svg?style=social&label=Watch)](https://github.com/AbrahamCaiJin/BottomAndShapeDemo)
+
+
+个人博客 [AbrahamCaiJin.github.io](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io)
+
+[![GitHub stars](https://img.shields.io/github/stars/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Star)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io) [![GitHub forks](https://img.shields.io/github/forks/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Fork)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io) [![GitHub watchers](https://img.shields.io/github/watchers/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Watch)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io)
+
+
+
 # API
 
 ## 银行卡管理 → [BankCheck](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/BankCheck.java)
