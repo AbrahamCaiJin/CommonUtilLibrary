@@ -2,16 +2,16 @@ apply plugin: 'com.android.library'
 //-------------------------上传到jcenter-----------------------
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-version = "1.0.0"//提交到仓库中的版本号
+version = "1.0.2"//提交到仓库中的版本号
 //-------------------------上传到jcenter-----------------------
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 12
-        targetSdkVersion 25
+        minSdkVersion 15
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -24,38 +24,44 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
 }
 
 dependencies {
-    final SUPPORT_VERSION = '25.3.1'
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    //    final SUPPORT_VERSION = '25.3.1'
+    final SUPPORT_VERSION = '28.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile "com.android.support:appcompat-v7:$SUPPORT_VERSION"
-    compile "com.android.support:design:$SUPPORT_VERSION"
-    testCompile 'junit:junit:4.12'
-
+    implementation "com.android.support:appcompat-v7:$SUPPORT_VERSION"
+    implementation "com.android.support:design:$SUPPORT_VERSION"
+    testImplementation 'junit:junit:4.12'
     //Fresco图片加载
-    compile 'com.facebook.fresco:fresco:1.3.0'
+    implementation 'com.facebook.fresco:fresco:1.3.0'
     //Picasso图片加载
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
     //Glide图片加载
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
     //KLog
     //    compile 'com.github.zhaokaiqiang.klog:library:1.5.0'
-
     //编码工具类用到
-    compile files('libs/BASE64Decoder.jar')
+    implementation files('libs/BASE64Decoder.jar')
     //Webservice网络工具类用到
-    compile files('libs/ksoap2-android-assembly-3.3.0-jar-with-dependencies.jar')
+    implementation files('libs/ksoap2-android-assembly-3.3.0-jar-with-dependencies.jar')
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.6'
 }
 //-------------------------上传到jcenter-----------------------
 
 def siteUrl = 'https://github.com/caijin199410/CommonUtil.git'      // 项目的主页   这个是说明，可随便填
 def gitUrl = 'https://github.com/caijin199410/CommonUtil.git'      // Git仓库的url  这个是说明，可随便填
-group = "com.abrahamcaijin.comonutil"    // 这里是groupId ,必须填写  一般填你唯一的包名
+group = "com.abrahamcaijin.commonutil"    // 这里是groupId ,必须填写  一般填你唯一的包名
 
 install {
     repositories.mavenInstaller {
@@ -99,11 +105,13 @@ task javadoc(type: Javadoc) {
         charSet 'UTF-8'
         author true
         version true
+        failOnError false
         links "http://docs.oracle.com/javase/7/docs/api"
     }
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
+
 task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir

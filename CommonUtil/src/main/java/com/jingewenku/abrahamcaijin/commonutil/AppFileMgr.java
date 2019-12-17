@@ -103,8 +103,6 @@ public class AppFileMgr {
         return size;
     }
     
-    
-    
     /**
      * 将File写入到指定路径下
      * @param bitmap
@@ -142,10 +140,6 @@ public class AppFileMgr {
 			}
 		}
 	}
-	
-	
-
-	
 	
 	/**
 	 * 检查文件是否存在（有时间戳）
@@ -196,9 +190,7 @@ public class AppFileMgr {
 			AppLogMessageMgr.i("AppFileMgr-->>getCacheFile:", "获取Sdcard指定目录下缓存文件成功！");
 			return cacheFile;
 	}
-	 
-	 
-	
+
 	/**
 	 * 获取文件名称
 	 * @param path
@@ -254,8 +246,7 @@ public class AppFileMgr {
 				AppLogMessageMgr.e("AppFileMgr-->>writeFileToSdCard:","该SdCard不存在或不永许读写操作,写入失败！");
 		}
 	}
-	    
-	
+
 	/**
 	 * 将InputStream写入SdCard指定目录下
 	 * @param path SdCard下路径
@@ -297,7 +288,6 @@ public class AppFileMgr {
 		return file;
 	}
 
-	    
 	/**
 	 * 从SdCard中读取文件内容
 	 * @param cacheFileName
@@ -324,8 +314,6 @@ public class AppFileMgr {
 			return fileContentStr;
 	}
 
-	    
-	    
 	/**
 	 * 创建文件夹(默认首先在SdCard中创建文件夹，如SdCard不存在, 则在手机中创建文件夹)
 	 * @param context
@@ -358,7 +346,6 @@ public class AppFileMgr {
 		}
 	}
     
-	
 	/**
 	 * 获取SD卡剩余空间的大小(SD卡剩余空间的大小（单位：byte）)
 	 * @return long   
@@ -928,8 +915,26 @@ public class AppFileMgr {
 		}
 			return DELETE_FALG;
 	}
-	
-	
+
+	/**
+	 *
+	 * @param closeables
+	 */
+	public static void closeIO(Closeable... closeables) {
+		if (null == closeables || closeables.length <= 0) {
+			return;
+		}
+		for (Closeable cb : closeables) {
+			try {
+				if (null == cb) {
+					continue;
+				}
+				cb.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	
 	

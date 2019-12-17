@@ -40,7 +40,7 @@ public class AppShellMgr {
 	 * @param isRoot
 	 *            whether need to run with root
 	 * @return
-	 * @see ShellUtils#execCommand(String[], boolean, boolean)
+	 * @see AppShellMgr#execCommand(String[], boolean, boolean)
 	 */
 	public static CommandResult execCommand(String command, boolean isRoot) {
 		return execCommand(new String[] { command }, isRoot, true);
@@ -54,7 +54,7 @@ public class AppShellMgr {
 	 * @param isRoot
 	 *            whether need to run with root
 	 * @return
-	 * @see ShellUtils#execCommand(String[], boolean, boolean)
+	 * @see AppShellMgr#execCommand(String[], boolean, boolean)
 	 */
 	public static CommandResult execCommand(List<String> commands,
 			boolean isRoot) {
@@ -71,7 +71,7 @@ public class AppShellMgr {
 	 * @param isRoot
 	 *            whether need to run with root
 	 * @return
-	 * @see ShellUtils#execCommand(String[], boolean, boolean)
+	 * @see AppShellMgr#execCommand(String[], boolean, boolean)
 	 */
 	public static CommandResult execCommand(String[] commands, boolean isRoot) {
 		return execCommand(commands, isRoot, true);
@@ -87,7 +87,7 @@ public class AppShellMgr {
 	 * @param isNeedResultMsg
 	 *            whether need result msg
 	 * @return
-	 * @see ShellUtils#execCommand(String[], boolean, boolean)
+	 * @see AppShellMgr#execCommand(String[], boolean, boolean)
 	 */
 	public static CommandResult execCommand(String command, boolean isRoot,
 			boolean isNeedResultMsg) {
@@ -104,7 +104,7 @@ public class AppShellMgr {
 	 * @param isNeedResultMsg
 	 *            whether need result msg
 	 * @return
-	 * @see ShellUtils#execCommand(String[], boolean, boolean)
+	 * @see AppShellMgr#execCommand(String[], boolean, boolean)
 	 */
 	public static CommandResult execCommand(List<String> commands,
 			boolean isRoot, boolean isNeedResultMsg) {

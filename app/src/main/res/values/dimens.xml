@@ -1,0 +1,77 @@
+<resources>
+    <!--app尺寸-->
+	<dimen name = "dp01">1.0dp</dimen>
+	<dimen name = "dp02">2.0dp</dimen>
+	<dimen name = "dp03">3.0dp</dimen>
+    <dimen name = "dp05">5.0dp</dimen>
+    <dimen name = "dpm05">-5.0dp</dimen>
+	<dimen name = "dp04">4.0dp</dimen>
+	<dimen name = "dp06">6.0dp</dimen>
+	<dimen name = "dp08">8.0dp</dimen>
+	<dimen name = "dp10">10.0dp</dimen>
+	<dimen name = "dpm10">-10.0dp</dimen>
+	<dimen name = "dp11">11.0dp</dimen>
+	<dimen name = "dp12">12.0dp</dimen>
+	<dimen name = "dp13">13.0dp</dimen>
+    <dimen name = "dp15">15.0dp</dimen>
+    <dimen name = "dpm15">-15.0dp</dimen>
+    <dimen name = "dp16">16.0dp</dimen>
+	<dimen name = "dp20">20.0dp</dimen>
+	<dimen name = "dpm20">-20.0dp</dimen>
+	<dimen name = "dpm22">-22.0dp</dimen>
+	<dimen name = "dp25">25.0dp</dimen>
+	<dimen name = "dpm25">-25.0dp</dimen>
+	<dimen name = "dp30">30.0dp</dimen>
+	<dimen name = "dpm30">-30.0dp</dimen>
+	<dimen name = "dp35">35.0dp</dimen>
+	<dimen name = "dp40">40.0dp</dimen>
+	<dimen name = "dpm40">-40.0dp</dimen>
+	<dimen name = "dpm42">-42.0dp</dimen>
+	<dimen name = "dp45">45.0dp</dimen>
+	<dimen name = "dpm45">-45.0dp</dimen>
+	<dimen name = "dpm47">-47.0dp</dimen>
+	<dimen name = "dpm48">-48.0dp</dimen>
+	<dimen name = "dp50">50.0dp</dimen>
+	<dimen name = "dpm50">-50.0dp</dimen>
+	<dimen name = "dp60">60.0dp</dimen>
+	<dimen name = "dp70">70.0dp</dimen>
+	<dimen name = "dpm70">-70.0dp</dimen>
+	<dimen name = "dp80">80.0dp</dimen>
+	<dimen name = "dp100">100.0dp</dimen>
+	<dimen name = "dpm100">-100.0dp</dimen>
+	<dimen name = "dp110">110.0dp</dimen>
+	<dimen name = "dp114">114.0dp</dimen>
+	<dimen name = "dp120">120.0dp</dimen>
+	<dimen name = "dp130">130.0dp</dimen>
+	<dimen name = "dp150">150.0dp</dimen>
+	<dimen name = "dp170">170.0dp</dimen>
+	<dimen name = "dp200">200.0dp</dimen>
+	<dimen name = "dp220">220.0dp</dimen>
+	<dimen name = "dp230">230.0dp</dimen>
+	<dimen name = "dp250">250.0dp</dimen>
+	<dimen name = "dp300">300.0dp</dimen>
+	<dimen name = "dp350">350.0dp</dimen>
+	<dimen name = "dp400">400.0dp</dimen>
+	<dimen name = "dp450">450.0dp</dimen>
+	<dimen name = "dp500">500.0dp</dimen>
+
+	<!--字体大小-->
+	<dimen name = "sp08">8.0sp</dimen>
+	<dimen name = "sp10">10.0sp</dimen>
+	<dimen name = "sp12">12.0sp</dimen>
+	<dimen name = "sp13">13.0sp</dimen>
+	<dimen name = "sp14">14.0sp</dimen>
+	<dimen name = "sp16">16.0sp</dimen>
+	<dimen name = "sp18">18.0sp</dimen>
+	<dimen name = "sp20">20.0sp</dimen>
+	<dimen name = "sp25">25.0sp</dimen>
+	<dimen name = "sp30">30.0sp</dimen>
+	<dimen name = "sp35">35.0sp</dimen>
+	<dimen name = "sp50">50.0sp</dimen>
+	<dimen name = "sp100">100.0sp</dimen>
+	<dimen name = "sp150">150.0sp</dimen>
+	<dimen name = "sp200">200.0sp</dimen>
+
+	<!--表格划线大小-->
+	<dimen name = "table_border_size">1.0dp</dimen>
+</resources>

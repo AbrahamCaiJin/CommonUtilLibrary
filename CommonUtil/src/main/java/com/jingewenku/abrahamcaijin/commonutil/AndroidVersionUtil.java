@@ -119,4 +119,8 @@ public class AndroidVersionUtil {
     public static boolean is(){
         return  Build.VERSION.SDK_INT >=  Build.VERSION_CODES.N;
     }
+
+//    public static boolean isO(){
+//        return VERSION.SDK_INT >= Build.VERSION_CODES.o
+//    }
 }

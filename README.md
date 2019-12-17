@@ -844,7 +844,7 @@
 
 Gradle:
 ``` groovy
-compile 'com.abrahamcaijin.commonutil:CommonUtil:1.0.2'
+implementation 'com.abrahamcaijin.commonutil:CommonUtil:1.0.2'
 
 ```
 Maven:
