@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        showTxt = (TextView) findViewById(R.id.show_txt);
+        showTxt = findViewById(R.id.show_txt);
         showTxt.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
