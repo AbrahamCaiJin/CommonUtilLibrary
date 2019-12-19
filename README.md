@@ -869,7 +869,7 @@ ViewPager无限滚动循环，支持Fragment和View，可自定义 [LoopViewPage
 
 Gradle:
 ``` groovy
-implementation 'com.abrahamcaijin.commonutil:CommonUtil:1.0.2'
+implementation 'com.abrahamcaijin.commonutil:CommonUtil:1.0.3'
 
 ```
 Maven:
@@ -877,13 +877,13 @@ Maven:
 <dependency>
   <groupId>com.abrahamcaijin.commonutil</groupId>
   <artifactId>CommonUtil</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <type>pom</type>
 </dependency>
 ```
  Ivy:
 ``` groovy
-<dependency org='com.abrahamcaijin.commonutil' name='CommonUtil' rev='1.0.2'>
+<dependency org='com.abrahamcaijin.commonutil' name='CommonUtil' rev='1.0.3'>
   <artifact name='CommonUtil' ext='pom' ></artifact>
 </dependency>
 ```
