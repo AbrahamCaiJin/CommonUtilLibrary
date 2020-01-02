@@ -447,18 +447,18 @@ ViewPager无限滚动循环，支持Fragment和View，可自定义 [LoopViewPage
     stringToLong    : String转Long
     longToString    : Long转String
 ## 日期管理类 → [AppDateMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppDateMgr.java)
-    todayYyyyMmDd         : 当天的年月日
-    todayHhMmSs           : 当天的时分秒
-    todayYyyyMmDdHhMmSs   : 当天的年月日时分秒
-    parseYyyy             : 获取年
-    parseMm               : 获取月
-    parseDd               : 获取日
-    parseYyyyMmDd         : 获取年月日
-    parseHhMmSs           : 时分秒
-    getWeekNumber         : 获取星期几
-    getWeekOfMonth        : 日期中某个月份的第几周
-    getWeekOfYear         : 日期中某个年份的第几周
-    dateTimeToTimeStamp   : 将年月日时分秒转成Long类型
+    todayYyyyMmDd           : 当天的年月日
+    todayHhMmSs             : 当天的时分秒
+    todayYyyyMmDdHhMmSs     : 当天的年月日时分秒
+    parseYyyy               : 获取年
+    parseMm                 : 获取月
+    parseDd                 : 获取日
+    parseYyyyMmDd           : 获取年月日
+    parseHhMmSs             : 时分秒
+    getWeekNumber           : 获取星期几
+    getWeekOfMonth          : 日期中某个月份的第几周
+    getWeekOfYear           : 日期中某个年份的第几周
+    dateTimeToTimeStamp     : 将年月日时分秒转成Long类型
     timeStampToDateTime     : 将Long类型转成年月日时分秒
     string2Date             : 将年月日时分秒转成Date类型
     date2String             : 将Date类型转成年月日时分秒
