@@ -11,7 +11,6 @@ package com.jingewenku.abrahamcaijin.commonutil;
  * @version: 1.0.0
  */
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -133,7 +132,7 @@ public class DateFunc {
      * @param type 时间计算单位，为分钟、小时等
      * @param elapse 持续时间长度
      * @return 是否超时
-     * @throws CodedException
+     * @throws RuntimeException
      */
     public static boolean compareElapsedTime(
         Date destDate,
