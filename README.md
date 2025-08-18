@@ -28,7 +28,7 @@ ViewPager无限滚动循环，支持Fragment和View，可自定义 [LoopViewPage
 
 [![GitHub stars](https://img.shields.io/github/stars/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Star)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io) [![GitHub forks](https://img.shields.io/github/forks/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Fork)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io) [![GitHub watchers](https://img.shields.io/github/watchers/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Watch)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io)
 
-
+<font color=red>注:本项目因众多使用者反馈已较为成熟，后续不在频繁更新，作者计划在此基础上新建立鸿蒙项目，欢迎感兴趣的开发者提issue、pr，参与共建。</font>
 
 # API
 
