@@ -3,8 +3,8 @@
 [![Travis](https://img.shields.io/badge/简书-Abraham-blue.svg)](http://www.jianshu.com/u/8a0908d85e0a)
 [![CircleCI](https://img.shields.io/badge/Blog-Abraham-brightgreen.svg)](http://blog.csdn.net/u014727709?viewmode=contents)
 [![TeamCity (simple build status)](https://img.shields.io/badge/Weibo-Abraham%20-lightgrey.svg)](http://weibo.com/p/1005053895373916/home?from=page_100505&mod=TAB&is_all=1#place)
-[![Travis](https://img.shields.io/badge/QQ群-523167548%20-ff69b4.svg)](https://shang.qq.com/wpa/qunwpa?idkey=4898a63b0283bc98cc61daeeb9eb6648a34886cf554a3ec272063ef5d999b012)</br>
-![star](https://gitcode.com/AbrahamCaiJin/CommonUtilLibrary/star/badge.svg)
+[![Travis](https://img.shields.io/badge/QQ群-523167548%20-ff69b4.svg)](https://shang.qq.com/wpa/qunwpa?idkey=4898a63b0283bc98cc61daeeb9eb6648a34886cf554a3ec272063ef5d999b012)
+![star](https://gitcode.com/AbrahamCaiJin/CommonUtilLibrary/star/badge.svg)</br>
 如果您觉得本项目不错的话，来个star支持下作者吧！
 
 快速开发工具类收集，史上最全的开发工具类 [CommonUtilLibrary](https://github.com/AbrahamCaiJin/CommonUtilLibrary)
