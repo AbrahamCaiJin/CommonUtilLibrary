@@ -4,7 +4,7 @@
 [![CircleCI](https://img.shields.io/badge/Blog-Abraham-brightgreen.svg)](http://blog.csdn.net/u014727709?viewmode=contents)
 [![TeamCity (simple build status)](https://img.shields.io/badge/Weibo-Abraham%20-lightgrey.svg)](http://weibo.com/p/1005053895373916/home?from=page_100505&mod=TAB&is_all=1#place)
 [![Travis](https://img.shields.io/badge/QQ群-523167548%20-ff69b4.svg)](https://shang.qq.com/wpa/qunwpa?idkey=4898a63b0283bc98cc61daeeb9eb6648a34886cf554a3ec272063ef5d999b012)</br>
-
+![star](https://gitcode.com/AbrahamCaiJin/CommonUtilLibrary/star/badge.svg)
 如果您觉得本项目不错的话，来个star支持下作者吧！
 
 快速开发工具类收集，史上最全的开发工具类 [CommonUtilLibrary](https://github.com/AbrahamCaiJin/CommonUtilLibrary)
@@ -28,7 +28,7 @@ ViewPager无限滚动循环，支持Fragment和View，可自定义 [LoopViewPage
 
 [![GitHub stars](https://img.shields.io/github/stars/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Star)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io) [![GitHub forks](https://img.shields.io/github/forks/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Fork)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io) [![GitHub watchers](https://img.shields.io/github/watchers/AbrahamCaiJin/AbrahamCaiJin.github.io.svg?style=social&label=Watch)](https://github.com/AbrahamCaiJin/AbrahamCaiJin.github.io)
 
-<font color=red>注:本项目因众多使用者反馈已较为成熟，后续不在频繁更新，作者计划在此基础上新建立鸿蒙项目，欢迎感兴趣的开发者提issue、pr，参与共建。</font>
+<font color=red>注:本项目因众多使用者反馈已较为成熟，后续不在频繁更新，作者计划在此基础上新建立鸿蒙项目，欢迎感兴趣的开发者在GitCode仓库提issue、pr，参与共建。</font>
 
 # API
 
